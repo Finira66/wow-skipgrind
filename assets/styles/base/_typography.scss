@@ -1,0 +1,118 @@
+.x-heading {
+  &-1, &-2, &-3, &-4, &-5, &-6, &-7 {
+    line-height: 120%;
+  }
+
+  &-1 {
+    font-weight: 700;
+    font-size: rem(64px);
+    line-height: 100%;
+  }
+  &-1-1 {
+    font-weight: 700;
+    font-size: rem(48px);
+    line-height: 100%;
+  }
+
+  &-2 {
+    font-size: rem(32px);
+    font-weight: 700;
+  }
+
+  &-3 {
+    font-weight: 700;
+    font-size: rem(24px);
+  }
+
+  &-4 {
+    font-size: rem(20px);
+    font-weight: 700;
+  }
+
+  &-5 {
+    font-size: rem(16px);
+    font-weight: 700;
+  }
+
+  &-6 {
+    font-size: rem(14px);
+    font-weight: 500;
+  }
+
+  &-7 {
+    font-weight: 500;
+    font-size: rem(12px);
+  }
+}
+
+.x-caption {
+  &-1, &-2, &-3, &-4 {
+    letter-spacing: 0.12em;
+    line-height: 120%;
+    text-transform: uppercase;
+  }
+
+  &-1 {
+    font-size: rem(24px);
+    font-weight: 700;
+  }
+
+  &-2 {
+    font-size: rem(12px);
+    font-weight: 700;
+  }
+
+  &-3 {
+    font-weight: 500;
+    font-size: rem(11px);
+  }
+
+  &-4 {
+    font-size: rem(9px);
+    font-weight: 500;
+  }
+}
+
+.x-large {
+  &-120 {
+    line-height: 120%;
+    font-size: rem(18px);
+  }
+  &-160 {
+    font-size: rem(18px);
+    line-height: 160%;
+  }
+}
+
+.x-regular {
+  &-120 {
+    font-size: rem(18px);
+    line-height: 120%;
+  }
+
+  &-140 {
+    font-size: rem(14px);
+    line-height: 140%;
+  }
+
+  &-160 {
+    font-size: rem(14px);
+    line-height: 160%;
+  }
+}
+
+.x-small {
+  &-120 {
+    font-size: rem(12px);
+    line-height: 120%;
+  }
+  &-140 {
+    font-size: rem(12px);
+    line-height: 140%;
+  }
+  &-160 {
+    font-size: rem(12px);
+    line-height: 160%;
+  }
+}
+

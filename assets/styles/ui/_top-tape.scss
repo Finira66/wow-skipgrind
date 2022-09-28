@@ -1,0 +1,42 @@
+.x-top-tape {
+  display: flex;
+  align-items: center;
+  top: $header-height;
+  left: $sidebar-width;
+  position: fixed;
+  right: 0;
+  padding: rem(12px) rem(72px);
+  background: rgba(0, 139, 234, 0.3);
+  z-index: 30;
+  backdrop-filter: $blur;
+  -webkit-backdrop-filter: $blur;
+  &__icon {
+    @include icon-size;
+    margin-right: rem(11px);
+    color: var(--color-white);
+    flex-shrink: 0;
+    @media (max-width: $sm-screen) {
+      display: none;
+    }
+  }
+  &__close {
+    width: rem(40px);
+    height: rem(40px);
+    margin-left: auto;
+    @include flex-row-center;
+  }
+  &__icon-close {
+    width: rem(20px);
+    height: rem(20px);
+    object-fit: contain;
+  }
+  &__text {
+    margin-right: rem(11px);
+  }
+  @media (max-width: $big-screen) {
+    top: initial;
+    bottom: rem(48px);
+    left: 0;
+    padding: rem(12px) rem(16px);
+  }
+}

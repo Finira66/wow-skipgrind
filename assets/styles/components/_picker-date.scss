@@ -1,0 +1,25 @@
+.x-picker-date {
+  &__title {
+    margin-bottom: rem(24px);
+  }
+  &__row {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  &__item {
+    width: 100%;
+    margin-right: rem(24px);
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &__subtitle {
+    margin-bottom: rem(16px);
+  }
+  &--hidden {
+    @media (max-width: $big-screen) {
+      display: none;
+    }
+  }
+}

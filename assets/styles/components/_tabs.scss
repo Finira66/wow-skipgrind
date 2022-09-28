@@ -1,0 +1,39 @@
+.x-tabs {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  border-bottom: 1px solid #283137;
+  @media (max-width: $sm-screen) {
+    overflow-x: auto;
+    width: 100%;
+    &::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: transparent;
+    }
+  }
+  &__button {
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    flex-shrink: 0;
+    border-bottom: rem(2px) solid transparent;
+    padding: rem(21px) rem(12px);
+    color: var(--color-blue-grey-20);
+    transition: .2s linear;
+
+    &:hover {
+      color: var(--color-secondary-60);
+      border-color: transparent;
+    }
+    &.active {
+      color: var(--color-secondary-60);
+      border-color: var(--color-secondary-60);
+    }
+  }
+
+}

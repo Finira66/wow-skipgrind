@@ -1,0 +1,73 @@
+.x-rating {
+  &__count {
+    margin-right: rem(8px);
+    display: flex;
+    align-items: baseline;
+    span {
+      color: var(--color-blue-grey-30);
+    }
+    &--mr {
+      margin-right: rem(12px);
+      @media (max-width: $sm-screen) {
+        margin-right: rem(8px);
+      }
+    }
+  }
+  &__count-num {
+    @media (max-width: $md-screen) {
+      @include heading-4;
+    }
+  }
+  &__box {
+    display: flex;
+    align-items: baseline;
+  }
+  &__text {
+    color: var(--color-blue-grey-40);
+  }
+  &__img {
+    margin-bottom: rem(8px);
+    @media (max-width: $sm-screen) {
+      width: rem(64px);
+      height: rem(16px);
+    }
+    &--big {
+      width: rem(226px);
+      height: rem(56px);
+      margin-bottom: 0;
+      @media (max-width: $sm-screen) {
+        width: rem(129px);
+        height: rem(32px);
+      }
+    }
+    &--mr {
+      margin-right: rem(24px);
+      @media (max-width: $md-screen) {
+        margin: 0 0 rem(8px) 0;
+      }
+    }
+
+  }
+  &--flex {
+    display: flex;
+    align-items: flex-end;
+    @media (max-width: $md-screen) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  &--hidden-mob {
+    @media (max-width: $lg-screen) {
+      display: none;
+    }
+  }
+  &--hidden {
+    display: none;
+    @media (max-width: $lg-screen) {
+      display: block;
+    }
+  }
+  &--main-indent {
+    margin: rem(32px) 0 rem(62px) 0;
+  }
+}

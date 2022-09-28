@@ -1,0 +1,79 @@
+.x-sidebar {
+  width: $sidebar-width;
+  height: 100%;
+  background: var(--color-transparent-5);
+  backdrop-filter: $blur;
+  -webkit-backdrop-filter: $blur;
+  position: fixed;
+  padding: rem(24px) rem(8px);
+  border-right:1px solid var(--color-blue-grey-100);
+  left: 0;
+  bottom: 0;
+  top: 0;
+  @media (max-width: $big-screen) {
+    display: none;
+  }
+  &__logo {
+    @include flex-row-center;
+    margin: 0 auto rem(24px) 0;
+  }
+  &__logo-img {
+    object-fit: contain;
+    width: rem(121px);
+    height: rem(121px);
+  }
+  &--mob {
+
+    padding-bottom: rem(50px);
+    display: none;
+    z-index: 25;
+    .x-menu__inner {
+      border-bottom: 0;
+    }
+
+    @media (max-width: $sm-screen) {
+      width: calc(100vw - 4.5rem);
+    }
+    &.open {
+      @media (max-width: $big-screen) {
+        display: block;
+      }
+    }
+  }
+  &__info {
+    margin: rem(16px) 0 rem(24px) 0;
+    font-size: rem(12px);
+    line-height: 120%;
+    color: var(--color-blue-grey-40);
+  }
+  &__name {
+    .x-title__name {
+      color: var(--color-blue-grey-40);
+    }
+    margin-bottom: rem(8px);
+    &--mb {
+      margin-bottom: rem(16px);
+    }
+  }
+  &__wrap {
+    padding: 0 rem(8px);
+  }
+  &__box {
+    margin-bottom: rem(12px);
+  }
+  &__socials {
+    display: flex;
+    align-items: center;
+    margin-bottom: rem(20px);
+  }
+  &__link {
+    margin-right: rem(16px);
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &__icon {
+    width: rem(20px);
+    height: rem(20px);
+  }
+}

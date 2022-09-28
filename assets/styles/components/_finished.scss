@@ -1,0 +1,36 @@
+.x-finished {
+  &__box {
+    display: flex;
+    align-items: center;
+    hr {
+      width: 100%;
+      border-color: var(--color-blue-grey-80);
+    }
+
+    margin-bottom: rem(16px);
+  }
+  &__circle {
+    width: rem(56px);
+    height: rem(56px);
+    margin: 0 rem(24px);
+    flex-shrink: 0;
+    background: rgba(195, 151, 19, 0.1);
+    border-radius: 50%;
+    @include flex-row-center;
+  }
+  &__text {
+    color: var(--color-blue-grey-40);
+    text-align: center;
+  }
+  &--mt {
+    margin-top: rem(24px);
+  }
+  &--mt-md {
+    margin-top: rem(32px);
+  }
+  &--mt-big {
+    @media (max-width: $sm-screen) {
+      margin-top: rem(48px);
+    }
+  }
+}

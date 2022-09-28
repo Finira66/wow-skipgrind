@@ -1,0 +1,27 @@
+.x-topics {
+  cursor: pointer;
+  &__label {
+    color: var(--color-blue-grey-40);
+    margin-bottom: rem(8px);
+  }
+  &__item {
+    padding: rem(12px) rem(24px);
+    border-radius: rem(12px);
+    background: var(--color-blue-grey-100);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__arrow {
+    flex-shrink: 0;
+    margin-left: rem(10px);
+    width: rem(22px);
+    height: rem(22px);
+    background: url("../images/icons/chevron.svg") center /contain no-repeat;
+    transform: rotate(90deg);
+    transition: .2s linear;
+    &.open {
+      transform: rotate(270deg);
+    }
+  }
+}

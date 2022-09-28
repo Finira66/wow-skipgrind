@@ -1,0 +1,37 @@
+.x-calendar-cards {
+  //display: grid;
+  //grid-template-columns: repeat(8, 2fr);
+  //grid-gap: rem(12px);
+  display: flex;
+  .x-calendar-card {
+    margin-right: rem(12px);
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  @media (max-width: $xl-screen) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: rem(12px);
+  }
+  &--grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: rem(12px);
+    @media (max-width: $xxl-screen) {
+      grid-template-columns: repeat(5, 1fr);
+    }
+    @media (max-width: rem(1355px)) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    @media (max-width: $md-screen) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media (max-width: $sm-screen) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  &__card-big {
+    grid-column: 1/3;
+  }
+}

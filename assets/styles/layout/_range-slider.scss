@@ -1,0 +1,147 @@
+//.irs--jetcode {
+//  height: rem(24px);
+//}
+//.irs--jetcode.irs-with-grid {
+//  height: 24px;
+//}
+//.irs--jetcode .irs-line {
+//  top: 11px;
+//  height: rem(2px);
+//  background-color: var(--color-blue-gray-50);
+//  border-radius: 4px;
+//}
+//.irs--jetcode .irs-bar {
+//  top: 11px;
+//  height: rem(2px);
+//  background-color: var(--color-primary-60);
+//}
+//.irs--jetcode .irs-bar--single {
+//  border-radius: 4px 0 0 4px;
+//}
+//.irs--jetcode .irs-shadow {
+//  height: rem(2px);
+//  bottom: 21px;
+//  background-color: rgba(222, 228, 236, 0.5);
+//}
+//.irs--jetcode .irs-handle {
+//  cursor: ew-resize;
+//  top: 4px;
+//  width: 16px;
+//  height: 16px;
+//  border-radius: 24px;
+//  background-color: var(--color-primary-60);
+//  //background-color: var(--color-blue-gray-50);
+//}
+//.irs--jetcode .irs-handle.state_hover,
+//.irs--jetcode .irs-handle:hover {
+//  --shadow-size: #{rem(3px)};
+//  top: 2px;
+//  width: 20px;
+//  height: 20px;
+//
+//  box-shadow: 0 0 0 var(--shadow-size) rgba(0, 139, 234, 0.1);
+//
+//  &:active {
+//    --shadow-size: #{rem(6px)};
+//  }
+//}
+//.irs--jetcode .irs-min,
+//.irs--jetcode .irs-max {
+//  color: #333;
+//  font-size: 14px;
+//  line-height: 1;
+//  top: 0;
+//  padding: 3px 5px;
+//  background-color: rgba(0, 0, 0, 0.1);
+//  border-radius: 4px;
+//}
+//.irs--jetcode .irs-from,
+//.irs--jetcode .irs-to,
+//.irs--jetcode .irs-single {
+//  font-size: 14px;
+//  line-height: 1;
+//  text-shadow: none;
+//  padding: 3px 5px;
+//  background-color: var(--color-primary-60);
+//  color: white;
+//  border-radius: 4px;
+//}
+//.irs--jetcode .irs-from:before,
+//.irs--jetcode .irs-to:before,
+//.irs--jetcode .irs-single:before {
+//  position: absolute;
+//  display: block;
+//  content: "";
+//  bottom: -6px;
+//  left: 50%;
+//  width: 0;
+//  height: 0;
+//  margin-left: -3px;
+//  overflow: hidden;
+//  border: 3px solid transparent;
+//  border-top-color: var(--color-primary-60);
+//}
+//.irs--jetcode .irs-grid {
+//  height: 25px;
+//}
+//.irs--jetcode .irs-grid-pol {
+//  background-color: #dedede;
+//}
+//.irs--jetcode .irs-grid-text {
+//  color: silver;
+//  font-size: 13px;
+//}
+
+.irs {
+  width: 100%;
+}
+.irs--flat .irs-line {
+  top: rem(10px);
+  height: rem(2px);
+  border-radius: 0;
+  background: var(--color-blue-grey-50);
+}
+.irs--flat .irs-bar {
+  top: rem(10px);
+  height: rem(2px);
+  background: var(--color-primary-60);
+}
+
+.irs--flat {
+  height: rem(20px);
+}
+
+.irs--flat .irs-handle {
+  position: absolute;
+  cursor: pointer;
+  top: 50%;
+  transform: translateY(-50%);
+  width: rem(20px);
+  height: rem(20px);
+  border-radius: 50%;
+  background: var(--color-primary-60);
+  i {
+    display: none;
+  }
+  &::before {
+    content: '';
+    width: rem(26px);
+    height: rem(26px);
+    border-radius: 50%;
+    background: rgba(0, 139, 234, 0.1);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    transition: .2s linear;
+  }
+  &:hover {
+    &::before {
+      transform: translate(-50%,-50%) scale(1.2);
+    }
+  }
+}
+.irs--flat .irs-handle>i:first-child {
+  display: none;
+
+}

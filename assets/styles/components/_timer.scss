@@ -1,0 +1,19 @@
+.x-timer {
+  display: flex;
+  align-items: flex-start;
+  &__icon {
+    @include icon-size;
+    flex-shrink: 0;
+    margin-right: rem(12px);
+  }
+  &__box {
+
+  }
+  &__title {
+    color: var(--color-blue-grey-50);
+    margin-bottom: rem(4px);
+  }
+  &__time {
+    color: var(--color-white);
+  }
+}

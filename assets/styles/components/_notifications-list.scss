@@ -1,0 +1,76 @@
+.x-notifications-list {
+  position: fixed;
+  top: $header-height;
+  right: 0;
+  bottom: 0;
+  background: var(--color-transparent-2);
+  backdrop-filter: $blur;
+  -webkit-backdrop-filter: $blur;
+  width: rem(534px);
+  padding: rem(32px) rem(24px);
+  z-index: 30;
+  border-radius: rem(32px) 0 0 0;
+  transform: translateX(100%);
+  transition: .2s linear;
+  opacity: 0;
+  visibility: hidden;
+  @media (max-width: $lg-screen) {
+    transform: translateX(0);
+    transform: translateY(100%);
+  }
+  &.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(0, 0);
+  }
+  &__overhead {
+    position: relative;
+    padding-right: rem(42px);
+    margin-bottom: rem(24px);
+    @media (max-width: $lg-screen) {
+      position: static;
+    }
+  }
+
+  &__close {
+    z-index: 30;
+    top: rem(32px);
+    right: rem(24px);
+    width: rem(32px);
+    height: rem(32px);
+
+    .x-button__icon-close {
+      width: rem(20px);
+      height: rem(20px);
+    }
+
+    @media (max-width: $lg-screen) {
+      width: 100%;
+      top: 0;
+      right: 0;
+      border-radius: rem(32px) rem(32px) 0 0;
+    }
+  }
+
+  @media (max-width: $big-screen) {
+    padding-bottom: rem(78px);
+  }
+  @media (max-width: $lg-screen) {
+    top: rem(80px);
+    width: 100%;
+    padding-top: rem(56px);
+    border-radius: rem(32px) rem(32px) 0 0;
+  }
+  @media (max-width: $sm-screen) {
+    padding: rem(56px) rem(16px) rem(70px) rem(16px);
+  }
+
+  &__title {
+    @media (max-width: $sm-screen) {
+      @include heading-3;
+    }
+  }
+  &__inner {
+    height: 100%;
+  }
+}

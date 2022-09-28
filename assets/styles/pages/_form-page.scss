@@ -1,0 +1,31 @@
+.x-form-page {
+  padding: rem(80px) 0;
+  @media (max-width: $sm-screen) {
+    padding-top: rem(16px);
+    padding-bottom: rem(90px);
+  }
+  &__breadcrumbs {
+    margin-bottom: rem(16px);
+    @media (max-width: $sm-screen) {
+      padding-bottom: rem(56px);
+    }
+  }
+  &__title {
+    margin-bottom: rem(40px);
+    @media (max-width: $xxl-screen) {
+      @include heading-1-1;
+    }
+    @media (max-width: $sm-screen) {
+      @include heading-2;
+      margin-bottom: rem(12px);
+    }
+  }
+  &__text {
+    margin-bottom: rem(64px);
+    color: var(--color-blue-grey-30);
+    @media (max-width: $sm-screen) {
+      @include regular-140;
+    }
+  }
+
+}

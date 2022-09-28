@@ -1,0 +1,111 @@
+.x-advantages-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: rem(24px);
+  padding: rem(8px);
+  background: var(--color-transparent-1);
+  min-height: rem(317px);
+  @media (max-width: $big-screen) {
+    min-height: auto;
+  }
+  @media (max-width: $sm-screen) {
+    padding: 0;
+  }
+  &__inner {
+    height: 100%;
+    padding: rem(24px);
+    @media (max-width: $big-screen) {
+      display: flex;
+      padding: rem(16px) rem(24px) rem(24px) rem(16px);
+    }
+    @media (max-width: $sm-screen) {
+      padding: rem(16px);
+    }
+  }
+  &__img {
+    width: rem(56px);
+    height: rem(56px);
+    margin-bottom: rem(32px);
+    flex-shrink: 0;
+    &--mb {
+      margin-bottom: rem(24px);
+    }
+    @media (max-width: $big-screen) {
+      margin: 0 rem(32px) 0 0 ;
+    }
+    @media (max-width: $sm-screen) {
+      width: rem(40px);
+      height: rem(40px);
+      margin-right: rem(24px);
+    }
+  }
+  &__title {
+    margin-bottom: rem(16px);
+    color: var(--color-white);
+    span {
+      color: var(--color-blue-grey-40);
+    }
+    @media (max-width: $sm-screen) {
+      @include heading-4;
+      margin-bottom: rem(12px);
+    }
+  }
+  &__text {
+    color: var(--color-blue-grey-30);
+    @media (max-width: $sm-screen) {
+      @include small-120;
+    }
+  }
+  &__button {
+    justify-content: flex-start;
+    margin-top: auto;
+    border-radius: 0 0 rem(20px) rem(20px);
+  }
+  &__arrow {
+    color: var(--color-white);
+    width: rem(16px);
+    height: rem(16px);
+    margin-left: rem(8px);
+  }
+  &--primary {
+    background: rgba(0, 139, 234, 0.1);
+  }
+  &--breakpoint {
+   @media (max-width: $xxl-screen) {
+     min-height: auto;
+   }
+  }
+  &--row {
+    min-height: auto;
+    padding: 0;
+    margin-bottom: rem(16px);
+    &:last-child {
+      margin-bottom: 0;
+    }
+    .x-advantages-card__inner {
+      display: flex;
+      align-items: flex-start;
+      padding: rem(24px) rem(32px);
+      @media (max-width: $sm-screen) {
+        padding: rem(16px);
+      }
+    }
+    .x-advantages-card__img {
+      margin: 0 rem(24px) 0 0;
+    }
+  }
+  &--md {
+    padding: 0;
+    min-height: auto;
+    margin-bottom: rem(16px);
+    &:last-child {
+      margin-bottom: 0;
+    }
+    .x-advantages-card__img {
+      margin-bottom: rem(24px);
+    }
+    @media (max-width: $xxl-screen) {
+      margin: 0;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+.x-menu-item {
+  padding: rem(10px) 0;
+  display: flex;
+  align-items: center;
+  &__icon {
+    width: rem(20px);
+    height: rem(20px);
+    flex-shrink: 0;
+    margin-right: rem(16px);
+  }
+  &__text {
+    color: var(--color-blue-grey-40);
+    font-size: rem(14px);
+    line-height: 120%;
+  }
+}

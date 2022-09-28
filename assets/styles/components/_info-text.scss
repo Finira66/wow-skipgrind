@@ -1,0 +1,14 @@
+.x-info-text {
+  font-size: 16px;
+  line-height: 160%;
+  color: var(--color-blue-grey-30);
+  @media (max-width: $sm-screen) {
+    font-size: rem(14px);
+  }
+  &__block {
+    margin-bottom: rem(30px);
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+.x-aside-subscribe {
+
+  padding: rem(32px) rem(24px);
+  border-radius: rem(16px);
+  background: var(--color-transparent-1);
+  &__title {
+    margin-bottom: rem(8px);
+  }
+  &__desc {
+    color: var(--color-blue-grey-30);
+    margin-bottom: rem(24px);
+  }
+  &__input {
+    margin-bottom: rem(16px);
+  }
+  &__btn {
+    margin-bottom: rem(16px);
+  }
+  &__info {
+    color: var(--color-blue-grey-40);
+  }
+}

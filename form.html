@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form</title>
+    <!--normalize-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+    <!--plugins-->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.10/css/perfect-scrollbar.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css"/>
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.2.0/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+    <!--main styles-->
+    <link rel="stylesheet" href="./assets/styles/layout.css">
+</head>
+
+<header class="x-header-cart x-header-cart--between">
+    <div class="x-header-cart__wrap">
+        <a href="#" class="x-button x-button--grey x-header-cart__back-button x-header-cart__back-button--mr">
+            <div class="x-caption-3 x-header-cart__back-text">Back to the website</div>
+            <img src="./assets/images/icons/home.svg" alt="home" class="x-header-cart__back-icon">
+        </a>
+        <div class="x-header-cart__socials x-header-cart__socials--hidden">
+            <a href="#" class="x-header-cart__social-link">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M9.9987 0.833008C4.93609 0.833008 0.832031 4.93706 0.832031 9.99967C0.832031 14.4802 4.04663 18.21 8.29531 19.0084V11.5638H5.83211V8.60098H8.29539V6.41596C8.29539 3.88027 9.78642 2.49959 11.9643 2.49959C13.0075 2.49959 13.9041 2.58024 14.1654 2.61621V5.2661L12.6549 5.26683C11.4705 5.26683 11.2411 5.85145 11.2411 6.70924V8.6009H14.0659L13.698 11.5637H11.2411V19.0829C15.7161 18.4765 19.1654 14.6409 19.1654 9.99967C19.1654 4.93706 15.0613 0.833008 9.9987 0.833008ZM10.048 19.1662L9.94993 19.1662C9.96617 19.1663 9.98243 19.1663 9.9987 19.1663C10.0151 19.1663 10.0316 19.1663 10.048 19.1662Z"
+                          fill="currentColor"/>
+                </svg>
+            </a>
+            <a href="#" class="x-header-cart__social-link">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.45873 16.2939C4.53614 16.3333 4.70632 16.3995 5.18735 16.4388C5.68999 16.4799 6.3516 16.4813 7.38225 16.4813H12.6203C13.651 16.4813 14.3126 16.4799 14.8153 16.4388C15.2963 16.3995 15.4665 16.3333 15.5439 16.2939C15.8674 16.129 16.1305 15.866 16.2954 15.5424C16.3348 15.465 16.401 15.2948 16.4403 14.8138C16.4813 14.3112 16.4828 13.6495 16.4828 12.6189V7.38079C16.4828 6.35014 16.4813 5.68852 16.4403 5.18588C16.401 4.70486 16.3348 4.53468 16.2954 4.45726L17.9454 3.61654C18.3346 4.38051 18.3346 5.3806 18.3346 7.38079V12.6189C18.3346 14.6191 18.3346 15.6192 17.9454 16.3831C17.603 17.0551 17.0566 17.6015 16.3846 17.9439C15.6206 18.3332 14.6205 18.3332 12.6203 18.3332H7.38225C5.38207 18.3332 4.38197 18.3332 3.618 17.9439L4.45873 16.2939Z"
+                          fill="currentColor"/>
+                    <path d="M3.618 17.9439C2.946 17.6015 2.39964 17.0551 2.05723 16.3831C1.66797 15.6192 1.66797 14.6191 1.66797 12.6189V7.38079C1.66797 5.3806 1.66797 4.38051 2.05723 3.61654C2.39964 2.94453 2.946 2.39817 3.618 2.05577C4.38197 1.6665 5.38207 1.6665 7.38225 1.6665H12.6203C14.6205 1.6665 15.6206 1.6665 16.3846 2.05577C17.0566 2.39817 17.603 2.94453 17.9454 3.61654L16.2954 4.45726C16.1305 4.1337 15.8674 3.87064 15.5439 3.70578C15.4665 3.66633 15.2963 3.60016 14.8153 3.56086C14.3126 3.5198 13.651 3.51836 12.6203 3.51836H7.38225C6.3516 3.51836 5.68999 3.5198 5.18735 3.56086C4.70632 3.60016 4.53614 3.66633 4.45873 3.70578C4.13517 3.87064 3.8721 4.1337 3.70724 4.45726C3.6678 4.53468 3.60163 4.70486 3.56233 5.18588C3.52126 5.68852 3.51982 6.35014 3.51982 7.38079V12.6189C3.51982 13.6495 3.52126 14.3112 3.56233 14.8138C3.60163 15.2948 3.6678 15.465 3.70724 15.5424C3.8721 15.866 4.13517 16.129 4.45873 16.2939L3.618 17.9439Z"
+                          fill="currentColor"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M5.53703 9.99984C5.53703 7.53428 7.53576 5.53555 10.0013 5.53555C12.4669 5.53555 14.4656 7.53428 14.4656 9.99984C14.4656 12.4654 12.4669 14.4641 10.0013 14.4641C7.53576 14.4641 5.53703 12.4654 5.53703 9.99984ZM10.0013 7.38741C8.55851 7.38741 7.38888 8.55703 7.38888 9.99984C7.38888 11.4426 8.55851 12.6123 10.0013 12.6123C11.4441 12.6123 12.6138 11.4426 12.6138 9.99984C12.6138 8.55703 11.4441 7.38741 10.0013 7.38741Z"
+                          fill="currentColor"/>
+                    <path d="M14.6309 6.29613C15.1423 6.29613 15.5569 5.88158 15.5569 5.37021C15.5569 4.85883 15.1423 4.44428 14.6309 4.44428C14.1196 4.44428 13.705 4.85883 13.705 5.37021C13.705 5.88158 14.1196 6.29613 14.6309 6.29613Z"
+                          fill="currentColor"/>
+                </svg>
+            </a>
+            <a href="#" class="x-header-cart__social-link">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.02588 12.386L7.72261 16.574C8.15651 16.574 8.34443 16.391 8.56978 16.1712L10.6041 14.2625L14.8193 17.2932C15.5924 17.7162 16.137 17.4935 16.3456 16.595L19.1125 3.86605L19.1132 3.8653C19.3584 2.7433 18.7 2.30456 17.9467 2.5798L1.68316 8.69302C0.573203 9.11602 0.590009 9.72352 1.49447 9.99877L5.65242 11.2685L15.3105 5.33529C15.765 5.03979 16.1783 5.20329 15.8384 5.49879L8.02588 12.386Z"
+                          fill="currentColor"/>
+                </svg>
+            </a>
+            <a href="#" class="x-header-cart__social-link">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.21188 8.63574C7.66563 8.63574 7.23438 9.11491 7.23438 9.69949C7.23438 10.2841 7.67521 10.7632 8.21188 10.7632C8.75813 10.7632 9.18937 10.2841 9.18937 9.69949C9.19896 9.11491 8.75813 8.63574 8.21188 8.63574ZM11.7098 8.63574C11.1635 8.63574 10.7323 9.11491 10.7323 9.69949C10.7323 10.2841 11.1731 10.7632 11.7098 10.7632C12.256 10.7632 12.6873 10.2841 12.6873 9.69949C12.6873 9.11491 12.256 8.63574 11.7098 8.63574Z"
+                          fill="currentColor"/>
+                    <path d="M16.3687 0.595215H3.52708C2.44417 0.595215 1.5625 1.47688 1.5625 2.56938V15.526C1.5625 16.6185 2.44417 17.5002 3.52708 17.5002H14.3946L13.8867 15.7273L15.1133 16.8677L16.2729 17.941L18.3333 19.7619V2.56938C18.3333 1.47688 17.4517 0.595215 16.3687 0.595215ZM12.6696 13.111C12.6696 13.111 12.3246 12.699 12.0371 12.3348C13.2925 11.9802 13.7717 11.1944 13.7717 11.1944C13.3787 11.4531 13.005 11.6352 12.6696 11.7598C12.1904 11.961 11.7304 12.0952 11.28 12.1719C10.36 12.3444 9.51667 12.2965 8.79792 12.1623C8.25167 12.0569 7.78208 11.9035 7.38917 11.7502C7.16875 11.664 6.92917 11.5585 6.68958 11.4244C6.66083 11.4052 6.63208 11.3956 6.60333 11.3765C6.58417 11.3669 6.57458 11.3573 6.565 11.3477C6.3925 11.2519 6.29667 11.1848 6.29667 11.1848C6.29667 11.1848 6.75667 11.9515 7.97375 12.3156C7.68625 12.6798 7.33167 13.111 7.33167 13.111C5.21375 13.044 4.40875 11.6544 4.40875 11.6544C4.40875 8.56855 5.78875 6.0673 5.78875 6.0673C7.16875 5.0323 8.48167 5.06105 8.48167 5.06105L8.5775 5.17605C6.8525 5.67438 6.05708 6.43146 6.05708 6.43146C6.05708 6.43146 6.26792 6.31646 6.6225 6.15355C7.64792 5.70313 8.4625 5.57855 8.79792 5.5498C8.85542 5.54021 8.90333 5.53063 8.96083 5.53063C9.54542 5.45396 10.2067 5.4348 10.8967 5.51147C11.8071 5.61688 12.7846 5.88521 13.7812 6.43146C13.7812 6.43146 13.0242 5.71271 11.395 5.21438L11.5292 5.06105C11.5292 5.06105 12.8421 5.0323 14.2221 6.0673C14.2221 6.0673 15.6021 8.56855 15.6021 11.6544C15.6021 11.6544 14.7875 13.044 12.6696 13.111Z"
+                          fill="currentColor"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+
+    <a href="#" class="x-header-cart__overhead">
+        <div class="x-header-cart__overhead-logo">
+            <img src="./assets/images/logo.svg" alt="logo" class="x-header-cart__logo">
+        </div>
+        <span class="x-heading-4 x-header-cart__logo-label">Info</span>
+    </a>
+
+    <nav class="x-header-cart__nav">
+        <a href="#" class="x-heading-6 x-header-cart__link">About us</a>
+        <a href="#" class="x-heading-6 x-header-cart__link">Work with us</a>
+        <a href="#" class="x-heading-6 x-header-cart__link">FAQ & Information</a>
+        <a href="#" class="x-heading-6 x-header-cart__link">Terms & Privacy</a>
+    </nav>
+</header>
+
+<div class="x-content x-header-pt">
+    <img src="./assets/images/blog-background.png" alt="background" class="x-content-background x-content-background--xxl-hide">
+    <div class="x-form-page">
+
+        <div class="x-container">
+            <div class="x-breadcrumbs x-form-page__breadcrumbs">
+                <a href="#" class="x-link x-link--blue x-caption-3 x-breadcrumbs__link">Home</a>
+                <a href="#" class="x-link x-link--blue x-caption-3 x-breadcrumbs__link">Catalog</a>
+                <a href="#" class="x-link x-link--blue x-caption-3 x-breadcrumbs__link active">50-60
+                    Shadowlands
+                    Power
+                    leveling +Unlock the Maw</a>
+            </div>
+            <div class="x-heading-1 x-form-page__title">Work with us</div>
+            <div class="x-large-120 x-form-page__text">
+                We are looking only sociable, punctual, responsive with extensive experience professionals! <br>
+                If you are one of this and want to work with us – we look forward to you!
+            </div>
+
+            <div class="x-form">
+                <div class="x-form__inner">
+                    <div class="x-form__col">
+                        <div class="x-heading-1 x-form__title">Personal info</div>
+                        <div class="x-form__item">
+                            <div class="x-caption-2 x-form__label">
+                                wHAT IS YOUR PURPOSE?
+                            </div>
+                            <div class="x-switch x-switch--grey">
+                                <div class="x-switch__wrapper">
+                                    <input type="radio" name="purpose" class="x-switch__input" checked>
+                                    <div class="x-switch__item">
+                                        <div class="x-caption-3">i’M A BOOSTER</div>
+                                    </div>
+                                </div>
+                                <div class="x-switch__wrapper">
+                                    <input type="radio" name="purpose" class="x-switch__input">
+                                    <div class="x-switch__item">
+                                        <div class="x-caption-3">i’M AN ADERTISING AGENT</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="x-form__item">
+                            <div class="x-form__row">
+                                <div class="x-form__box">
+                                    <div class="x-caption-2 x-form__label">
+                                        Your real Name <span>*</span>
+                                    </div>
+                                    <div class="x-input">
+                                        <input type="text" placeholder="Your real Name"
+                                               class="x-input__area">
+                                    </div>
+                                </div>
+                                <div class="x-form__box x-form__box--sm">
+                                    <div class="x-caption-2 x-form__label">
+                                        Your age
+                                    </div>
+                                    <div class="x-input">
+                                        <input type="text" placeholder="Age"
+                                               class="x-input__area">
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="x-form__item">
+                            <div class="x-caption-2 x-form__label">
+                                Games, you are pro in <span>*</span>
+                            </div>
+                            <div class="x-custom-select-wrapper x-select">
+                                <div class="x-custom-select">
+                                    <div class="x-custom-select__trigger">
+                                        <span>VIP 3</span>
+                                        <div class="arrow"></div>
+                                    </div>
+                                    <div class="custom-options">
+
+                                        <div class="x-checkbox x-checkbox--blue">
+                                            <input type="checkbox" class="x-checkbox__input">
+                                            <div class="x-checkbox__square"></div>
+                                            <div class="x-checkbox__box">
+                                                <div class="x-regular-160 x-checkbox__label">Layer 2</div>
+
+                                                <span class="x-heading-7 x-checkbox__add">+ 32€</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="x-checkbox x-checkbox--blue">
+                                            <input type="checkbox" class="x-checkbox__input">
+                                            <div class="x-checkbox__square"></div>
+                                            <div class="x-checkbox__box">
+                                                <div class="x-regular-160 x-checkbox__label">Layer 2</div>
+
+                                                <span class="x-heading-7 x-checkbox__add">+ 32€</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="x-checkbox x-checkbox--blue">
+                                            <input type="checkbox" class="x-checkbox__input">
+                                            <div class="x-checkbox__square"></div>
+                                            <div class="x-checkbox__box">
+                                                <div class="x-regular-160 x-checkbox__label">Layer 2</div>
+
+                                                <span class="x-heading-7 x-checkbox__add">+ 32€</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="x-checkbox x-checkbox--blue">
+                                            <input type="checkbox" class="x-checkbox__input">
+                                            <div class="x-checkbox__square"></div>
+                                            <div class="x-checkbox__box">
+                                                <div class="x-regular-160 x-checkbox__label">Layer 2</div>
+
+                                                <span class="x-heading-7 x-checkbox__add">+ 32€</span>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="custom-options__buttons">
+                                            <button class="x-caption-3 x-button x-button--primary custom-options__button">Apply</button>
+                                            <button class="x-caption-3 x-button x-button--grey custom-options__button">Clean
+                                                and cancel</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="x-form__item">
+                            <div class="x-caption-2 x-form__label">
+                                Describe your experience in those games <span>*</span>
+                            </div>
+
+                            <textarea class="x-textarea x-scrolled" placeholder="Tell about each of them. The more informations you’ll tell, the more chances that we we will start ASAP"></textarea>
+                        </div>
+
+                        <div class="x-form__item x-form__item--mb">
+                            <div class="x-caption-2 x-form__label">
+                                Chat for communication <span>*</span>
+                            </div>
+                            <div class="x-form__row">
+                                <div class="x-messenger x-form__messenger-item">
+                                    <input type="radio" name="messenger" class="x-messenger__input" checked>
+                                    <div class="x-messenger__item">
+                                        <div class="x-messenger__circle"></div>
+                                        <img src="./assets/images/icons/discord-blue.svg" class="x-messenger__icon">
+                                    </div>
+                                </div>
+                                <div class="x-messenger x-form__messenger-item">
+                                    <input type="radio" name="messenger" class="x-messenger__input">
+                                    <div class="x-messenger__item">
+                                        <div class="x-messenger__circle"></div>
+                                        <img src="./assets/images/icons/skype-blue.svg" class="x-messenger__icon">
+                                    </div>
+                                </div>
+                                <div class="x-messenger">
+                                    <input type="radio" name="messenger" class="x-messenger__input">
+                                    <div class="x-messenger__item">
+                                        <div class="x-messenger__circle"></div>
+                                        <img src="./assets/images/icons/whatsapp.svg" class="x-messenger__icon">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="x-form__item">
+                            <div class="x-caption-2 x-form__label">
+                                Skype contact <span>*</span>
+                            </div>
+                            <div class="x-input">
+                                <svg class="x-input__icon x-input__icon--dark-grey" viewBox="0 0 20 20" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                          d="M8.56569 2.12829C9.03144 2.04391 9.51122 1.99984 10.0013 1.99984C14.4196 1.99984 18.0013 5.58156 18.0013 9.99984C18.0013 10.4899 17.9572 10.9697 17.8728 11.4354C18.169 12.0615 18.3346 12.7613 18.3346 13.4998C18.3346 16.1692 16.1707 18.3332 13.5013 18.3332C12.7628 18.3332 12.0629 18.1675 11.4369 17.8714C10.9712 17.9558 10.4914 17.9998 10.0013 17.9998C5.58302 17.9998 2.0013 14.4181 2.0013 9.99984C2.0013 9.50976 2.04537 9.02997 2.12976 8.56423C1.83361 7.9382 1.66797 7.23836 1.66797 6.49984C1.66797 3.83046 3.83193 1.6665 6.5013 1.6665C7.23983 1.6665 7.93966 1.83214 8.56569 2.12829ZM7.16416 9.0432C7.3529 9.36668 7.61382 9.64217 7.92657 9.8482H7.92656C8.34104 10.1194 8.78167 10.3484 9.24182 10.5317C9.75616 10.7464 10.1551 10.9287 10.4387 11.0785C10.6786 11.1963 10.8964 11.3545 11.0826 11.5463C11.2235 11.6959 11.3017 11.8937 11.3013 12.0992C11.3073 12.244 11.2788 12.3881 11.218 12.5196C11.1573 12.6512 11.0661 12.7663 10.952 12.8556C10.6472 13.0608 10.2826 13.1581 9.91611 13.132C9.70885 13.1341 9.50202 13.1127 9.29957 13.0682C9.13534 13.0322 8.97471 12.9813 8.81962 12.9164C8.68385 12.8577 8.49855 12.7696 8.26372 12.652C8.07472 12.5512 7.86434 12.4971 7.65015 12.4941C7.4577 12.4861 7.26956 12.5525 7.12466 12.6794C7.05563 12.7452 7.00169 12.8251 6.96656 12.9137C6.93143 13.0024 6.91595 13.0976 6.92118 13.1928C6.91684 13.3732 6.97121 13.5502 7.07611 13.6971C7.20268 13.8574 7.36635 13.9846 7.55301 14.0677C8.28245 14.3836 9.07313 14.5331 9.86757 14.5051C10.4457 14.5168 11.0211 14.4231 11.5656 14.2287C12.0175 14.0683 12.411 13.7763 12.6955 13.3902C12.9749 12.9824 13.1165 12.496 13.0995 12.002C13.1104 11.5986 13.0095 11.2002 12.8079 10.8507C12.6031 10.518 12.3272 10.2347 11.9999 10.0214C11.5857 9.75416 11.1461 9.52828 10.6877 9.34698C10.6387 9.32298 10.5879 9.30267 10.5358 9.28621C10.0661 9.09185 9.71269 8.93591 9.47574 8.81838C9.26431 8.71935 9.0728 8.58242 8.91072 8.41436C8.77442 8.27114 8.69926 8.08047 8.70116 7.88277C8.69453 7.73206 8.72853 7.58233 8.7996 7.44926C8.87067 7.3162 8.97619 7.20467 9.10513 7.12636C9.4104 6.94466 9.76166 6.85501 10.1167 6.86818C10.3893 6.86525 10.661 6.89897 10.9246 6.96841C11.2109 7.05096 11.4911 7.15348 11.763 7.27519C11.8735 7.32638 11.9936 7.35332 12.1154 7.35422C12.2038 7.3566 12.2918 7.34023 12.3734 7.3062C12.4551 7.27217 12.5286 7.22123 12.5892 7.15675C12.6532 7.08678 12.7028 7.00488 12.7351 6.91575C12.7674 6.82662 12.7818 6.73199 12.7776 6.63728C12.7804 6.45495 12.7167 6.27783 12.5984 6.13906C12.4378 5.97035 12.2387 5.84318 12.0182 5.76847C11.778 5.68028 11.5298 5.61617 11.277 5.57709C10.9236 5.51912 10.5659 5.49168 10.2078 5.49507C9.66055 5.49175 9.1169 5.58322 8.6009 5.76543C8.12657 5.92563 7.70316 6.20864 7.37374 6.58565C7.0567 6.96109 6.88911 7.44018 6.90299 7.93137C6.89178 8.3184 6.9818 8.70165 7.16416 9.0432Z"
+                                          fill="currentColor"/>
+                                </svg>
+                                <input type="text" placeholder="Skype" class="x-input__area">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="x-form__col">
+                        <div class="x-heading-1 x-form__title">Experience</div>
+                        <div class="x-form__item">
+                            <div class="x-caption-2 x-form__label">
+                                Specify which orders you can perform <span>*</span>
+                            </div>
+
+                            <textarea class="x-textarea x-scrolled" placeholder="Tell about each of them. The more informations you’ll tell, the more chances that we we will start ASAP"></textarea>
+                        </div>
+
+                        <div class="x-form__item">
+                            <div class="x-caption-2 x-form__label">
+                                Link on your armory or screen to character
+                            </div>
+                            <div class="x-input">
+                                <input type="text" placeholder="Link on your armory or screen to character" class="x-input__area">
+                            </div>
+                        </div>
+
+                        <div class="x-form__item">
+                            <div class="x-caption-2 x-form__label">
+                                How did you find us?
+                            </div>
+                            <div class="x-input">
+                                <input type="text" placeholder="How did you find us?" class="x-input__area">
+                            </div>
+                        </div>
+
+                        <div class="x-form__item">
+                            <div class="x-caption-2 x-form__label">
+                                Is this a permanent job for you?
+                            </div>
+                            <div class="x-switch x-switch--grey">
+                                <div class="x-switch__wrapper">
+                                    <input type="radio" name="job" class="x-switch__input" checked>
+                                    <div class="x-switch__item">
+                                        <div class="x-caption-3">yES</div>
+                                    </div>
+                                </div>
+                                <div class="x-switch__wrapper">
+                                    <input type="radio" name="job" class="x-switch__input">
+                                    <div class="x-switch__item">
+                                        <div class="x-caption-3">nO</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="x-checkbox">
+                            <input type="checkbox" class="x-checkbox__input">
+                            <div class="x-checkbox__square"></div>
+                            <div class="x-regular-160 x-checkbox__label">I’m agree to <a href="#" class="x-checkbox__link">terms
+                                of use</a></div>
+                        </div>
+
+                        <button class="x-button x-form__button">
+                            <span class="x-caption-3">Send the proposal</span>
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="x-nav-bottom">
+    <a href="#" class="x-nav-bottom__button ">
+        <svg width="24" height="24" class="x-nav-bottom__icon" viewBox="0 0 24 24" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+            <path opacity="0.3"
+                  d="M12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7C16 9.20914 14.2091 11 12 11Z"
+                  fill="currentColor"/>
+            <path d="M3.00065 20.1992C3.38826 15.4265 7.26191 13 11.9833 13C16.7712 13 20.7049 15.2932 20.9979 20.2C21.0096 20.3955 20.9979 21 20.2467 21C16.5411 21 11.0347 21 3.7275 21C3.47671 21 2.97954 20.4592 3.00065 20.1992Z"
+                  fill="currentColor"/>
+        </svg>
+
+
+        <div class="x-nav-bottom__label">About us</div>
+    </a>
+    <a href="#" class="x-nav-bottom__button">
+
+        <svg width="24" height="24" class="x-nav-bottom__icon" viewBox="0 0 24 24" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+            <path opacity="0.3"
+                  d="M12.9486 8.31623L11.0513 7.68377C11.816 5.38965 13.0426 3.95855 14.7574 3.52986C15.6502 3.30665 17 1.86951 17 1H19C19 2.79716 17.0163 5.02668 15.2425 5.47014C14.2906 5.70811 13.5173 6.61035 12.9486 8.31623Z"
+                  fill="currentColor"/>
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M7.81786 6.99992H16.2024C17.5586 6.7294 18.9493 7.42716 19.5263 8.72038L22.95 16.3939C23.4665 17.5515 23.1997 18.9087 22.2835 19.7846L22.1062 19.9542C20.8813 21.1253 18.9304 21.0502 17.7992 19.7884L15.2993 16.9999H8.86443L6.36458 19.7884C5.23342 21.0502 3.28244 21.1253 2.05762 19.9542L1.85757 19.7629C0.952576 18.8977 0.680136 17.5613 1.17417 16.4108L4.46134 8.75582C5.02832 7.43545 6.44087 6.71755 7.81786 6.99992ZM9.99987 11.9999C9.99987 13.1045 9.10444 13.9999 7.99987 13.9999C6.8953 13.9999 5.99987 13.1045 5.99987 11.9999C5.99987 10.8953 6.8953 9.99992 7.99987 9.99992C9.10444 9.99992 9.99987 10.8953 9.99987 11.9999ZM16.9999 11.9999C17.5522 11.9999 17.9999 11.5522 17.9999 10.9999C17.9999 10.4476 17.5522 9.99992 16.9999 9.99992C16.4476 9.99992 15.9999 10.4476 15.9999 10.9999C15.9999 11.5522 16.4476 11.9999 16.9999 11.9999ZM15.9999 12.9999C15.9999 13.5522 15.5522 13.9999 14.9999 13.9999C14.4476 13.9999 13.9999 13.5522 13.9999 12.9999C13.9999 12.4476 14.4476 11.9999 14.9999 11.9999C15.5522 11.9999 15.9999 12.4476 15.9999 12.9999Z"
+                  fill="currentColor"/>
+        </svg>
+
+
+        <div class="x-nav-bottom__label">Work with us</div>
+    </a>
+    <a href="#" class="x-nav-bottom__button active">
+
+        <svg width="24" height="24" class="x-nav-bottom__icon" viewBox="0 0 24 24" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+            <path opacity="0.3" fill-rule="evenodd" clip-rule="evenodd"
+                  d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                  fill="currentColor"/>
+            <path d="M10.5909 13.2089V14.8679H11.8509C14.3919 14.8679 16.3869 12.9149 16.3869 10.3949C16.3869 7.87488 14.3919 5.92188 11.8509 5.92188C9.30994 5.92188 7.33594 7.87488 7.33594 10.3949H9.12094C9.12094 8.79888 10.2339 7.58088 11.8509 7.58088C13.4469 7.58088 14.6019 8.79888 14.6019 10.3949C14.6019 11.9909 13.4469 13.2089 11.8509 13.2089H10.5909Z"
+                  fill="white"/>
+            <path d="M11.9999 15.9999C11.4477 15.9999 10.9999 16.4476 10.9999 16.9999C10.9999 17.5522 11.4477 17.9999 11.9999 17.9999C12.5522 17.9999 12.9999 17.5522 12.9999 16.9999C12.9999 16.4476 12.5522 15.9999 11.9999 15.9999Z"
+                  fill="currentColor"/>
+        </svg>
+
+
+        <div class="x-nav-bottom__label">FAQ & Information</div>
+    </a>
+    <a href="#" class="x-nav-bottom__button">
+        <svg width="24" height="24" class="x-nav-bottom__icon" viewBox="0 0 24 24" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+            <path opacity="0.3" fill-rule="evenodd" clip-rule="evenodd"
+                  d="M4.85714 1H11.7364C12.0911 1 12.4343 1.12568 12.7051 1.35474L17.4687 5.38394C17.8057 5.66895 18 6.08788 18 6.5292V19.0833C18 20.8739 17.9796 21 16.1429 21H4.85714C3.02045 21 3 20.8739 3 19.0833V2.91667C3 1.12612 3.02045 1 4.85714 1ZM7 13C7 12.4477 7.44772 12 8 12H15C15.5523 12 16 12.4477 16 13C16 13.5523 15.5523 14 15 14H8C7.44772 14 7 13.5523 7 13ZM8 16C7.44772 16 7 16.4477 7 17C7 17.5523 7.44772 18 8 18H11C11.5523 18 12 17.5523 12 17C12 16.4477 11.5523 16 11 16H8Z"
+                  fill="currentColor"/>
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M6.85714 3H14.7364C15.0911 3 15.4343 3.12568 15.7051 3.35474L20.4687 7.38394C20.8057 7.66895 21 8.08788 21 8.5292V21.0833C21 22.8739 20.9796 23 19.1429 23H6.85714C5.02045 23 5 22.8739 5 21.0833V4.91667C5 3.12612 5.02045 3 6.85714 3ZM7 13C7 12.4477 7.44772 12 8 12H15C15.5523 12 16 12.4477 16 13C16 13.5523 15.5523 14 15 14H8C7.44772 14 7 13.5523 7 13ZM8 16C7.44772 16 7 16.4477 7 17C7 17.5523 7.44772 18 8 18H11C11.5523 18 12 17.5523 12 17C12 16.4477 11.5523 16 11 16H8Z"
+                  fill="currentColor"/>
+        </svg>
+
+
+        <div class="x-nav-bottom__label">Terms & Privacy</div>
+    </a>
+</div>
+
+<!--jQuery-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!--plugins-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.10/js/perfect-scrollbar.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.2.0/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+<!--main-->
+<script src="assets/js/main.js"></script>
+<script src="assets/js/select.js"></script>
+</body>
+</html>

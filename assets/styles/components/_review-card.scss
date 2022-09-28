@@ -1,0 +1,89 @@
+.x-review-card {
+  padding: rem(8px);
+  border-radius: rem(24px);
+  background: var(--color-transparent-1);
+  backdrop-filter: $blur;
+  -webkit-backdrop-filter: $blur;
+  &__stars {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+  }
+  &__star {
+    width: rem(20px);
+    height: rem(20px);
+    margin-right: rem(4px);
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &__inner {
+    padding: rem(24px);
+    @media (max-width: $sm-screen) {
+      padding: rem(16px) rem(16px) rem(24px) rem(16px);
+    }
+  }
+  &__top {
+    display: flex;
+    align-items: center;
+    margin-bottom: rem(32px);
+    @media (max-width: $sm-screen) {
+      margin-bottom: rem(24px);
+    }
+  }
+  &__line {
+    margin: 0 rem(32px);
+    height: rem(1px);
+    width: 100%;
+    background: var(--color-blue-grey-90);
+  }
+  &__date {
+    flex-shrink: 0;
+    color: var(--color-blue-grey-50);
+  }
+  &__info {
+    display: flex;
+    align-items: center;
+    margin-bottom: rem(16px);
+  }
+  &__photo {
+    background: var(--color-blue-grey-70);
+    border: 2px solid var(--color-primary-60);
+    border-radius: 50%;
+    width: rem(40px);
+    height: rem(40px);
+    margin-right: rem(20px);
+    object-fit: cover;
+    @media (max-width: $sm-screen) {
+      width: rem(32px);
+      height: rem(32px);
+      margin-right: rem(16px);
+    }
+  }
+  &__name {
+    color: var(--color-blue-grey-10);
+    @media (max-width: $sm-screen) {
+      @include heading-5;
+    }
+  }
+  &__desc {
+    color: var(--color-blue-grey-20);
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow-y: hidden;
+    @media (max-width: $sm-screen) {
+      @include regular-160;
+    }
+  }
+  &__button {
+    padding: rem(9.5px);
+    border-radius: 0 0 rem(20px) rem(20px);
+  }
+  &.open {
+    background: var(--color-transparent-2);
+    .x-review-card__desc {
+      display: block;
+    }
+  }
+}

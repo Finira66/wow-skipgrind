@@ -1,0 +1,10 @@
+.x-category-page {
+  &__breadcrumbs {
+    margin: rem(16px) 0;
+  }
+  &__rating {
+    @media (max-width: $lg-screen) {
+      margin: 0 0 rem(56px) 0;
+    }
+  }
+}

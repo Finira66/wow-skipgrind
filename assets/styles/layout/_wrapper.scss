@@ -1,0 +1,19 @@
+.x-wrapper {
+  padding-left: $sidebar-width;
+  padding-top: $header-height;
+  @media (max-width: $big-screen) {
+    padding-left: 0;
+  }
+  @media (max-width: $lg-screen) {
+    padding-top: rem(48px);
+  }
+  &--pr {
+    padding-right: $sidebar-right-width;
+    @media (max-width: $xxl-screen) {
+      padding-right: rem(320px);
+    }
+    @media (max-width: $big-screen) {
+      padding-right: 0;
+    }
+  }
+}

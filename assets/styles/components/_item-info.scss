@@ -1,0 +1,38 @@
+.x-item-info {
+  padding: rem(32px) 0 0 0;
+  &__rating {
+    margin-bottom: rem(56px);
+    &--hidden-mob {
+      @media (max-width: $sm-screen) {
+        display: none;
+      }
+    }
+    &--hidden {
+      display: none;
+      @media (max-width: $sm-screen) {
+        display: block;
+      }
+    }
+  }
+  &__info {
+
+  }
+  &__info-block {
+    margin-bottom: rem(33px);
+    @media (max-width: $sm-screen) {
+      margin-bottom: rem(16px);
+    }
+  }
+  &__tabs {
+    margin-bottom: rem(56px);
+    @media (max-width: $big-screen) {
+      margin-bottom: rem(24px);
+    }
+    @media (max-width: $sm-screen) {
+      margin-bottom: 0;
+    }
+  }
+  &__important {
+    margin-bottom: rem(48px);
+  }
+}

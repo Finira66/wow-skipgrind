@@ -1,0 +1,9 @@
+.x-single-slider {
+  display: flex;
+  align-items: center;
+  &__input {
+    width: rem(80px);
+    margin-right: rem(16px);
+    flex-shrink: 0;
+  }
+}

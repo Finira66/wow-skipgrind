@@ -1,0 +1,107 @@
+.x-messenger {
+  position: relative;
+  &__input {
+    @include absolute-input;
+    &:checked {
+      + .x-messenger__item {
+        background: var(--color-blue-grey-05);
+        .x-messenger__circle {
+          background: var(--color-blue-grey-100);
+          &::before {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+  &__item {
+    display: inline-flex;
+    align-items: center;
+    padding: rem(12px) rem(20px);
+    border-radius: rem(100px);
+    background: var(--color-blue-grey-90);
+    @media (max-width: $sm-screen) {
+      padding: rem(10px) rem(16px);
+    }
+  }
+  &__circle {
+    flex-shrink: 0;
+    width: rem(16px);
+    height: rem(16px);
+    border-radius: 50%;
+    border: 1px solid var(--color-blue-grey-40);
+    position: relative;
+    transition: .2s linear;
+    margin-right: rem(16px);
+    background: transparent;
+    &::before {
+      content: '';
+      width: rem(4px);
+      height: rem(4px);
+      background: var(--color-blue-grey-05);
+      border-radius: 50%;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
+      opacity: 0;
+      transition: .2s linear;
+    }
+  }
+  &__icon {
+    @include icon-size;
+  }
+  &--big {
+    .x-messenger__item {
+      width: 100%;
+    }
+  }
+  &__box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  &__wrapper {
+    display: flex;
+    align-items: center;
+  }
+  &__icon {
+    @include icon-size;
+    flex-shrink: 0;
+    margin-right: rem(4px);
+  }
+  &__text {
+    color: var(--color-blue-grey-30);
+  }
+  &__add {
+    color: var(--color-blue-grey-40);
+  }
+  &--grey {
+    .x-messenger__item {
+      border: rem(2px) solid transparent;
+      background: var(--color-blue-grey-110);
+    }
+    .x-messenger__input {
+      &:checked {
+        + .x-messenger__item {
+          border-color: var(--color-blue-grey-50);
+          background: var(--color-blue-grey-100);
+          .x-messenger__circle {
+            background: var(--color-white);
+            &::before {
+              opacity: 1;
+              background: var(--color-blue-grey-100);
+            }
+          }
+          .x-messenger__text {
+            color: var(--color-white);
+          }
+          .x-messenger__add {
+            color: var(--color-white);
+          }
+        }
+      }
+    }
+  }
+}

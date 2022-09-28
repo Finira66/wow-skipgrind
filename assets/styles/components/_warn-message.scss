@@ -1,0 +1,19 @@
+.x-warn-message {
+  background: rgba(236, 43, 45, 0.1);
+  padding: rem(16px) rem(24px);
+  display: flex;
+  align-items: center;
+  width: 100%;
+  backdrop-filter: $blur;
+  -webkit-backdrop-filter: $blur;
+  &__icon {
+    width: rem(32px);
+    height: rem(32px);
+    margin-right: rem(24px);
+  }
+  &__text {
+    font-size: rem(14px);
+    line-height: 120%;
+    color: var(--color-red-50);
+  }
+}

@@ -1,0 +1,24 @@
+.x-similar-items {
+  &__wrapper {
+    //display: grid;
+    //grid-template-columns: repeat(3, 1fr);
+    //grid-gap: rem(24px);
+    display: flex;
+    flex-wrap: wrap;
+    margin: rem(-12px);
+    @media (max-width: $sm-screen) {
+      margin: rem(-4px);
+    }
+  }
+  &__item {
+    width: calc(100% / 3 - 1.5rem);
+    margin: rem(12px);
+    @media (max-width: $xxl-screen) {
+      width: calc(100% / 2 - 1.5rem);
+    }
+    @media (max-width: $md-screen) {
+      width: calc(100% / 2 - 0.5rem);
+      margin: rem(4px);
+    }
+  }
+}

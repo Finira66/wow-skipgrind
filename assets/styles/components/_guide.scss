@@ -1,0 +1,23 @@
+.x-guide {
+  &__overhead {
+    margin-bottom: rem(32px);
+  }
+  &__title {
+    margin-bottom: rem(24px);
+  }
+  &__cards {
+    margin-bottom: rem(40px);
+    @media (max-width: $lg-screen) {
+      margin-bottom: rem(24px);
+    }
+    @media (max-width: $sm-screen) {
+      margin-bottom: rem(16px);
+    }
+    &--mb-none {
+      margin-bottom: 0;
+    }
+    &--mb-medium {
+      margin-bottom: rem(24px);
+    }
+  }
+}

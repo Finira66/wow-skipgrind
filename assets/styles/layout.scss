@@ -1,0 +1,253 @@
+// utils
+@import "utils/functions";
+@import "utils/colors";
+@import "utils/mixins";
+@import "utils/variables";
+
+// ui
+@import "ui/checkbox";
+@import "ui/forms";
+@import "ui/datepicker";
+@import "ui/overlay";
+@import "ui/textarea";
+@import "ui/input";
+@import "ui/title";
+@import "ui/ol-list";
+@import "ui/buttons";
+@import "ui/error";
+@import "ui/area-error";
+@import "ui/links";
+@import "ui/top-tape";
+
+// base
+@import "base/typography";
+@import "base/reset";
+@import "base/fonts";
+
+// components
+@import "components/content-background";
+@import "components/overhead";
+@import "components/breadcrumbs";
+@import "components/guide";
+@import "components/pagination";
+@import "components/aside-map";
+@import "components/aside-subscribe";
+@import "components/blog-panel";
+@import "components/list";
+@import "components/related-items";
+@import "components/price";
+@import "components/menu";
+@import "components/menu-link";
+@import "components/menu-list";
+@import "components/event";
+@import "components/main";
+@import "components/rating";
+@import "components/raids";
+@import "components/sorting-toggle";
+@import "components/calendar-cards";
+@import "components/popular-offers";
+@import "components/categories";
+@import "components/poster";
+@import "components/advantages";
+@import "components/subscribe";
+@import "components/info-text";
+@import "components/reviews";
+@import "components/item-info";
+@import "components/item-name";
+@import "components/tabs";
+@import "components/important";
+@import "components/accordion";
+@import "components/works";
+@import "components/similar-items";
+@import "components/finished";
+@import "components/hint";
+@import "components/switch";
+@import "components/single-slider";
+@import "components/cart";
+@import "components/payment";
+@import "components/messenger";
+@import "components/cart-item";
+@import "components/modal";
+@import "components/basket";
+@import "components/detailed-slider";
+@import "components/arrows";
+@import "components/picker-date";
+@import "components/calendar-dates";
+@import "components/select";
+@import "components/timer";
+@import "components/raids-modal";
+@import "components/format";
+@import "components/raid-time";
+@import "components/static";
+@import "components/topics";
+@import "components/mob-map";
+@import "components/about-us";
+@import "components/shortly-desc";
+@import "components/statistics";
+@import "components/our-advantages";
+@import "components/be-team";
+@import "components/contact-us";
+@import "components/form";
+@import "components/small-inputs";
+@import "components/bottom-info";
+@import "components/question";
+@import "components/notification";
+@import "components/notifications-list";
+@import "components/cookies";
+@import "components/warn-message";
+
+/* items */
+@import "components/guide-card";
+@import "components/item-card";
+@import "components/offer-item";
+@import "components/calendar-card";
+@import "components/category-item";
+@import "components/advantages-card";
+@import "components/review-card";
+@import "components/works-item";
+@import "components/format-item";
+@import "components/menu-item";
+
+//layout
+@import "layout/blog-header";
+@import "layout/header";
+@import "layout/content";
+@import "layout/footer";
+@import "layout/wrapper";
+@import "layout/scrolled";
+@import "layout/nav-bottom";
+@import "layout/sidebar-right";
+@import "layout/range-slider";
+@import "layout/header-cart";
+@import "layout/sidebar";
+
+// pages
+@import "pages/blog";
+@import "pages/index";
+@import "pages/category";
+@import "pages/search";
+@import "pages/form-page";
+
+
+html {
+  font-size: ($root-font-size / 16px) * 100%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: var(--color-white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+
+}
+
+html, body {
+  //height: 100%;
+}
+
+html {
+  height: 100%;
+}
+
+.x-container {
+  padding: 0 rem(20px);
+  margin: 0 auto;
+  width: 100%;
+  max-width: rem(1632px);
+  @media (max-width: $xxl-screen) {
+    max-width: rem(1152px);
+  }
+  @media (max-width: $xl-screen) {
+    padding: 0 rem(16px);
+  }
+
+  &--medium {
+    max-width: rem(1360px);
+  }
+
+  &--main {
+    max-width: rem(1552px);
+    @media (max-width: $xxl-screen) {
+      max-width: rem(1304px);
+    }
+  }
+
+  &--no-padding {
+    padding: 0;
+  }
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.x-bg-main {
+  background: var(--color-blue-grey-120);
+}
+
+.x-mb-title {
+  margin-bottom: rem(32px);
+  @media (max-width: $sm-screen) {
+    margin-bottom: rem(24px);
+  }
+}
+
+.x-mb-md-title {
+  margin-bottom: rem(48px);
+  @media (max-width: $sm-screen) {
+    margin-bottom: rem(24px);
+  }
+}
+
+.x-mb-block-big {
+  margin-bottom: rem(80px);
+  @media (max-width: $md-screen) {
+    margin-bottom: rem(64px);
+  }
+  @media (max-width: $sm-screen) {
+    margin-bottom: rem(48px);
+  }
+}
+
+.x-mb-md {
+  margin-bottom: rem(64px);
+  @media (max-width: $sm-screen) {
+    margin-bottom: rem(48px);
+  }
+}
+
+.x-mb-sm {
+  margin-bottom: rem(32px);
+}
+
+.x-mb-xs {
+  margin-bottom: rem(24px);
+}
+
+.x-mb-xxs {
+  margin-bottom: rem(16px);
+}
+
+.x-block-title {
+  @include heading-3;
+}
+
+.x-calendar-carousel {
+  overflow: hidden;
+
+  .swiper-slide {
+    width: auto;
+  }
+}
+
+.x-header-pt {
+  padding-top: rem(72px);
+  @media (max-width: $md-screen) {
+    padding-top: rem(55px);
+  }
+  @media (max-width: $sm-screen) {
+    padding-top: rem(49px);
+  }
+}

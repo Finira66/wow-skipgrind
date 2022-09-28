@@ -1,0 +1,75 @@
+.x-input {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  border: 1px solid var(--color-blue-grey-90);
+  padding: rem(11px) rem(24px);
+  border-radius: rem(24px);
+  background-color: var(--color-blue-grey-130);
+  transition: .2s linear;
+  min-height: rem(48px);
+  &:hover {
+    border-color: var(--color-blue-grey-40);
+    .x-input__icon {
+      color: var(--color-white);
+    }
+  }
+  &:active {
+    border-color: var(--color-blue-grey-60);
+    .x-input__input {
+      &::placeholder {
+        color: var(--color-white);
+      }
+    }
+  }
+  &__area {
+    width: 100%;
+    background-color: transparent;
+    color: var(--color-white);
+    font-size: rem(14px);
+    &::placeholder {
+      color: var(--color-blue-grey-50);
+      font-size: rem(14px);
+    }
+    &--center {
+      text-align: center;
+    }
+  }
+  &__icon {
+    flex-shrink: 0;
+    transition: .2s linear;
+    width: rem(24px);
+    height: rem(24px);
+    color: var(--color-blue-grey-30);
+    margin-right: rem(16px);
+    &--dark-grey {
+      color: var(--color-blue-grey-50);
+    }
+  }
+  &--small {
+    @include flex-row-center;
+    height: rem(40px);
+    padding: rem(8px);
+    min-height: auto;
+  }
+  &--search {
+    margin-bottom: rem(48px);
+    display: none;
+    @media (max-width: $xl-screen) {
+      display: flex;
+    }
+    @media (max-width: $md-screen) {
+      margin-bottom: rem(44px);
+    }
+    @media (max-width: $sm-screen) {
+      margin-bottom: rem(24px);
+    }
+  }
+  &--error {
+    border-color: var(--color-red-40);
+    &:hover {
+      border-color: var(--color-red-40);
+    }
+  }
+}

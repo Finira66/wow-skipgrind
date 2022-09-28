@@ -1,0 +1,12 @@
+.x-small-inputs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &__line {
+    border: none;
+    margin: 0 rem(16px);
+    width: 100%;
+    height: rem(1px);
+    background: var(--color-blue-grey-80);
+  }
+}

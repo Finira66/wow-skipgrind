@@ -1,0 +1,596 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Blog search</title>
+    <!--normalize-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+    <!--plugins-->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.10/css/perfect-scrollbar.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css"/>
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.2.0/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+    <!--main styles-->
+    <link rel="stylesheet" href="./assets/styles/layout.css">
+</head>
+<body>
+<div class="x-content x-blog">
+    <header class="x-blog-header">
+        <div class="x-blog-header__top">
+            <a href="#" class="x-button    x-blog-header__button">
+                <div class="x-caption-3">Get World of Warcraft services</div>
+            </a>
+            <nav class="x-blog-header__nav">
+                <a href="" class="x-link x-link--grey x-heading-6 x-blog-header__link">Castle Nathria Raid</a>
+                <a href="" class="x-link x-link--grey x-heading-6 x-blog-header__link">Shadowlands services</a>
+                <a href="" class="x-link x-link--grey x-heading-6 x-blog-header__link">Torghast Tower</a>
+                <a href="" class="x-link x-link--grey x-heading-6 x-blog-header__link">Mythic+</a>
+                <a href="" class="x-link x-link--grey x-heading-6 x-blog-header__link">Raids</a>
+                <a href="" class="x-link x-link--grey x-heading-6 x-blog-header__link">Powerleveling</a>
+                <a href="" class="x-link x-link--blue x-heading-6 x-blog-header__link">And more services...</a>
+            </nav>
+        </div>
+        <div class="x-blog-header__bottom">
+            <button class="x-blog-header__menu-button">
+                <div src="./assets/images/icons/menu.svg" class="x-blog-header__icon x-blog-header__icon--menu"></div>
+
+            </button>
+            <div class="x-blog-header__menu-list">
+                <div class="x-blog-header__menu-category">
+                    <svg class="x-blog-header__menu-arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="2" height="14" rx="1" transform="matrix(0 -1 -1 0 19 13)" fill="currentColor"/>
+                        <path d="M12.7071 17.2929C13.0976 17.6834 13.0976 18.3166 12.7071 18.7071C12.3166 19.0976 11.6834 19.0976 11.2929 18.7071L5.29289 12.7071C4.91432 12.3285 4.90107 11.7189 5.26285 11.3243L10.7628 5.32428C11.136 4.91716 11.7686 4.88965 12.1757 5.26285C12.5828 5.63604 12.6103 6.26861 12.2372 6.67572L7.38414 11.9699L12.7071 17.2929Z" fill="white"/>
+                    </svg>
+
+                    <span class="x-heading-6 x-blog-header__menu-text">Guiedes by classes</span>
+                    <svg class="x-blog-header__menu-icon x-blog-header__menu-icon--chevron" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.5299 4.47157C5.26955 4.21122 5.26955 3.78911 5.5299 3.52876C5.79025 3.26841 6.21236 3.26841 6.47271 3.52876L10.4727 7.52876C10.7251 7.78114 10.7339 8.18753 10.4927 8.45065L6.82607 12.4506C6.57728 12.7221 6.15556 12.7404 5.88415 12.4916C5.61274 12.2428 5.5944 11.8211 5.8432 11.5497L9.07854 8.02021L5.5299 4.47157Z" fill="currentColor"/>
+                    </svg>
+                </div>
+                <div class="x-blog-header__classes-inner hidden">
+                    <div class="x-blog-header__classes-box">
+                        <div class="x-heading-5 x-blog-header__classes-title">Death knight</div>
+                        <a href="#"
+                           class="x-heading-7 x-link x-link--grey x-blog-header__classes-link">Blood </a>
+                        <a href="#"
+                           class="x-heading-7 x-link x-link--grey x-blog-header__classes-link">Frost</a>
+                        <a href="#"
+                           class="x-heading-7 x-link x-link--grey x-blog-header__classes-link">Unholy</a>
+                    </div>
+                    <div class="x-blog-header__classes-box">
+                        <div class="x-heading-5 x-blog-header__classes-title">Demon hunter</div>
+                        <a href="#"
+                           class="x-heading-7 x-link x-link--grey x-blog-header__classes-link">Blood </a>
+                        <a href="#"
+                           class="x-heading-7 x-link x-link--grey x-blog-header__classes-link">Havoc</a>
+                        <a href="#" class="x-heading-7 x-link x-link--grey x-blog-header__classes-link">Vengeance
+                        </a>
+                    </div>
+                    <div class="x-blog-header__classes-box">
+                        <div class="x-heading-5 x-blog-header__classes-title">Deuid
+                        </div>
+                        <a href="#" class="x-heading-7 x-link x-link--grey x-blog-header__classes-link">Feral
+                        </a>
+                        <a href="#" class="x-heading-7 x-link x-link--grey x-blog-header__classes-link">Balance
+                        </a>
+                        <a href="#" class="x-heading-7 x-link x-link--grey x-blog-header__classes-link">Restoration</a>
+                    </div>
+                    <div class="x-blog-header__classes-box">
+                        <div class="x-heading-5 x-blog-header__classes-title">Warrior
+                        </div>
+                        <a href="#" class="x-heading-7 x-link x-link--grey x-blog-header__classes-link">Protection
+                        </a>
+                        <a href="#" class="x-heading-7 x-link x-link--grey x-blog-header__classes-link">Arms</a>
+                        <a href="#" class="x-heading-7 x-link x-link--grey x-blog-header__classes-link">Fury
+                        </a>
+                    </div>
+                    <div class="x-blog-header__classes-box">
+                        <div class="x-heading-5 x-blog-header__classes-title">Hunter
+
+                        </div>
+                        <a href="#" class="x-heading-7 x-link x-link--grey x-blog-header__classes-link">Beast
+                            Mastery
+
+                        </a>
+                        <a href="#" class="x-heading-7 x-link x-link--grey x-blog-header__classes-link">Marksmanship
+                        </a>
+                        <a href="#" class="x-heading-7 x-link x-link--grey x-blog-header__classes-link">Survival
+                        </a>
+                    </div>
+                    <div class="x-blog-header__classes-box">
+                        <div class="x-heading-5 x-blog-header__classes-title">Mage
+                        </div>
+                        <a href="#" class="x-heading-7 x-link x-link--grey x-blog-header__classes-link">Arcane
+
+                        </a>
+                        <a href="#" class="x-heading-7 x-link x-link--grey x-blog-header__classes-link">Fire
+                        </a>
+                        <a href="#" class="x-heading-7 x-link x-link--grey x-blog-header__classes-link">Frost
+
+                        </a>
+                    </div>
+                    <div class="x-blog-header__classes-box">
+                        <div class="x-heading-5 x-blog-header__classes-title">Monk
+                        </div>
+                        <a href="#" class="x-heading-7 x-link x-link--grey x-blog-header__classes-link">Brewmaster
+                        </a>
+                        <a href="#" class="x-heading-7 x-link x-link--grey x-blog-header__classes-link">Mistweaver
+                        </a>
+                        <a href="#" class="x-heading-7 x-link x-link--grey x-blog-header__classes-link">Windwalker
+                        </a>
+                    </div>
+                    <div class="x-blog-header__classes-box">
+                        <div class="x-heading-5 x-blog-header__classes-title">Paladin
+                        </div>
+                        <a href="#" class="x-heading-7 x-link x-link--grey x-blog-header__classes-link">Protection
+                        </a>
+                        <a href="#" class="x-heading-7 x-link x-link--grey x-blog-header__classes-link">Retribution
+                        </a>
+                        <a href="#" class="x-heading-7 x-link x-link--grey x-blog-header__classes-link">Holy
+                        </a>
+                    </div>
+                    <div class="x-blog-header__classes-box">
+                        <div class="x-heading-5 x-blog-header__classes-title">Priest
+                        </div>
+                        <a href="#" class="x-heading-7 x-link x-link--grey x-blog-header__classes-link">Shadow
+                        </a>
+                        <a href="#" class="x-heading-7 x-link x-link--grey x-blog-header__classes-link">Discipline
+                        </a>
+                        <a href="#" class="x-heading-7 x-link x-link--grey x-blog-header__classes-link">Holy
+                        </a>
+                    </div>
+                    <div class="x-blog-header__classes-box">
+                        <div class="x-heading-5 x-blog-header__classes-title">Rogue
+                        </div>
+                        <a href="#" class="x-heading-7 x-link x-link--grey x-blog-header__classes-link">Subtlety
+                        </a>
+                        <a href="#" class="x-heading-7 x-link x-link--grey x-blog-header__classes-link">Outlaw
+                        </a>
+                        <a href="#" class="x-heading-7 x-link x-link--grey x-blog-header__classes-link">Assassination
+                        </a>
+                    </div>
+                    <div class="x-blog-header__classes-box">
+                        <div class="x-heading-5 x-blog-header__classes-title">Shaman
+                        </div>
+                        <a href="#" class="x-heading-7 x-link x-link--grey x-blog-header__classes-link">Elemental
+                        </a>
+                        <a href="#" class="x-heading-7 x-link x-link--grey x-blog-header__classes-link">Restoration
+                        </a>
+                        <a href="#" class="x-heading-7 x-link x-link--grey x-blog-header__classes-link">Enhancement
+                        </a>
+                    </div>
+                    <div class="x-blog-header__classes-box">
+                        <div class="x-heading-5 x-blog-header__classes-title">Warlock
+                        </div>
+                        <a href="#" class="x-heading-7 x-link x-link--grey x-blog-header__classes-link">Affliction
+                        </a>
+                        <a href="#" class="x-heading-7 x-link x-link--grey x-blog-header__classes-link">Destruction
+                        </a>
+                        <a href="#" class="x-heading-7 x-link x-link--grey x-blog-header__classes-link">Demonology
+                        </a>
+                    </div>
+                </div>
+
+                <div class="x-blog-header__menu-category">
+                    <span class="x-heading-6 x-blog-header__menu-text">Guides by modes</span>
+                    <svg class="x-blog-header__menu-icon" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.5299 4.47157C5.26955 4.21122 5.26955 3.78911 5.5299 3.52876C5.79025 3.26841 6.21236 3.26841 6.47271 3.52876L10.4727 7.52876C10.7251 7.78114 10.7339 8.18753 10.4927 8.45065L6.82607 12.4506C6.57728 12.7221 6.15556 12.7404 5.88415 12.4916C5.61274 12.2428 5.5944 11.8211 5.8432 11.5497L9.07854 8.02021L5.5299 4.47157Z" fill="currentColor"/>
+                    </svg>
+
+                </div>
+            </div>
+            <button class="x-blog-header__menu-button">
+                <svg class="x-blog-header__icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="0.7" d="M14.2929 16.7071C13.9024 16.3166 13.9024 15.6834 14.2929 15.2929C14.6834 14.9024 15.3166 14.9024 15.7071 15.2929L19.7071 19.2929C20.0976 19.6834 20.0976 20.3166 19.7071 20.7071C19.3166 21.0976 18.6834 21.0976 18.2929 20.7071L14.2929 16.7071Z" fill="currentColor"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M4 11C4 14.866 7.13401 18 11 18C14.866 18 18 14.866 18 11C18 7.13401 14.866 4 11 4C7.13401 4 4 7.13401 4 11ZM16 11C16 13.7614 13.7614 16 11 16C8.23858 16 6 13.7614 6 11C6 8.23858 8.23858 6 11 6C13.7614 6 16 8.23858 16 11Z" fill="currentColor"/>
+                </svg>
+            </button>
+            <div class="x-blog-header__box">
+                <a href="#" class="x-blog-header__logo">
+                    <img src="./assets/images/logo.svg" alt="logo">
+                </a>
+                <div class="x-heading-4 x-blog-header__title">Guides</div>
+            </div>
+            <div class="x-blog-header__categories">
+                <div class="x-blog-header__category">
+                    <div class="x-heading-6 x-blog-header__category-name btn-classes-open">
+                        Guiedes by classes
+                        <svg class="x-blog-header__arrow" viewBox="0 0 16 17" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.5299 6.02843C11.7902 5.76808 12.2124 5.76808 12.4727 6.02843C12.7331 6.28878 12.7331 6.71089 12.4727 6.97124L8.47271 10.9712C8.22032 11.2236 7.81393 11.2325 7.55082 10.9913L3.55082 7.32461C3.27941 7.07581 3.26107 6.6541 3.50987 6.38269C3.75866 6.11127 4.18037 6.09294 4.45179 6.34173L7.98125 9.57708L11.5299 6.02843Z"
+                                  fill="currentColor"/>
+                        </svg>
+
+                    </div>
+                    <div class="x-blog-header__dropdown x-blog-header__classes-dropdown">
+                        <div class="x-blog-header__dropdown-inner x-blog-header__classes-inner">
+                            <div class="x-blog-header__classes-box">
+                                <div class="x-heading-5 x-blog-header__classes-title">Death knight</div>
+                                <a href="#"
+                                   class="x-heading-7 x-link x-link--grey x-blog-header__classes-link">Blood </a>
+                                <a href="#"
+                                   class="x-heading-7 x-link x-link--grey x-blog-header__classes-link">Frost</a>
+                                <a href="#"
+                                   class="x-heading-7 x-link x-link--grey x-blog-header__classes-link">Unholy</a>
+                            </div>
+                            <div class="x-blog-header__classes-box">
+                                <div class="x-heading-5 x-blog-header__classes-title">Demon hunter</div>
+                                <a href="#"
+                                   class="x-heading-7 x-link x-link--grey x-blog-header__classes-link">Blood </a>
+                                <a href="#"
+                                   class="x-heading-7 x-link x-link--grey x-blog-header__classes-link">Havoc</a>
+                                <a href="#" class="x-heading-7 x-link x-link--grey x-blog-header__classes-link">Vengeance
+                                </a>
+                            </div>
+                            <div class="x-blog-header__classes-box">
+                                <div class="x-heading-5 x-blog-header__classes-title">Deuid
+                                </div>
+                                <a href="#" class="x-heading-7 x-link x-link--grey x-blog-header__classes-link">Feral
+                                </a>
+                                <a href="#" class="x-heading-7 x-link x-link--grey x-blog-header__classes-link">Balance
+                                </a>
+                                <a href="#" class="x-heading-7 x-link x-link--grey x-blog-header__classes-link">Restoration</a>
+                            </div>
+                            <div class="x-blog-header__classes-box">
+                                <div class="x-heading-5 x-blog-header__classes-title">Warrior
+                                </div>
+                                <a href="#" class="x-heading-7 x-link x-link--grey x-blog-header__classes-link">Protection
+                                </a>
+                                <a href="#" class="x-heading-7 x-link x-link--grey x-blog-header__classes-link">Arms</a>
+                                <a href="#" class="x-heading-7 x-link x-link--grey x-blog-header__classes-link">Fury
+                                </a>
+                            </div>
+                            <div class="x-blog-header__classes-box">
+                                <div class="x-heading-5 x-blog-header__classes-title">Hunter
+
+                                </div>
+                                <a href="#" class="x-heading-7 x-link x-link--grey x-blog-header__classes-link">Beast
+                                    Mastery
+
+                                </a>
+                                <a href="#" class="x-heading-7 x-link x-link--grey x-blog-header__classes-link">Marksmanship
+                                </a>
+                                <a href="#" class="x-heading-7 x-link x-link--grey x-blog-header__classes-link">Survival
+                                </a>
+                            </div>
+                            <div class="x-blog-header__classes-box">
+                                <div class="x-heading-5 x-blog-header__classes-title">Mage
+                                </div>
+                                <a href="#" class="x-heading-7 x-link x-link--grey x-blog-header__classes-link">Arcane
+
+                                </a>
+                                <a href="#" class="x-heading-7 x-link x-link--grey x-blog-header__classes-link">Fire
+                                </a>
+                                <a href="#" class="x-heading-7 x-link x-link--grey x-blog-header__classes-link">Frost
+
+                                </a>
+                            </div>
+                            <div class="x-blog-header__classes-box">
+                                <div class="x-heading-5 x-blog-header__classes-title">Monk
+                                </div>
+                                <a href="#" class="x-heading-7 x-link x-link--grey x-blog-header__classes-link">Brewmaster
+                                </a>
+                                <a href="#" class="x-heading-7 x-link x-link--grey x-blog-header__classes-link">Mistweaver
+                                </a>
+                                <a href="#" class="x-heading-7 x-link x-link--grey x-blog-header__classes-link">Windwalker
+                                </a>
+                            </div>
+                            <div class="x-blog-header__classes-box">
+                                <div class="x-heading-5 x-blog-header__classes-title">Paladin
+                                </div>
+                                <a href="#" class="x-heading-7 x-link x-link--grey x-blog-header__classes-link">Protection
+                                </a>
+                                <a href="#" class="x-heading-7 x-link x-link--grey x-blog-header__classes-link">Retribution
+                                </a>
+                                <a href="#" class="x-heading-7 x-link x-link--grey x-blog-header__classes-link">Holy
+                                </a>
+                            </div>
+                            <div class="x-blog-header__classes-box">
+                                <div class="x-heading-5 x-blog-header__classes-title">Priest
+                                </div>
+                                <a href="#" class="x-heading-7 x-link x-link--grey x-blog-header__classes-link">Shadow
+                                </a>
+                                <a href="#" class="x-heading-7 x-link x-link--grey x-blog-header__classes-link">Discipline
+                                </a>
+                                <a href="#" class="x-heading-7 x-link x-link--grey x-blog-header__classes-link">Holy
+                                </a>
+                            </div>
+                            <div class="x-blog-header__classes-box">
+                                <div class="x-heading-5 x-blog-header__classes-title">Rogue
+                                </div>
+                                <a href="#" class="x-heading-7 x-link x-link--grey x-blog-header__classes-link">Subtlety
+                                </a>
+                                <a href="#" class="x-heading-7 x-link x-link--grey x-blog-header__classes-link">Outlaw
+                                </a>
+                                <a href="#" class="x-heading-7 x-link x-link--grey x-blog-header__classes-link">Assassination
+                                </a>
+                            </div>
+                            <div class="x-blog-header__classes-box">
+                                <div class="x-heading-5 x-blog-header__classes-title">Shaman
+                                </div>
+                                <a href="#" class="x-heading-7 x-link x-link--grey x-blog-header__classes-link">Elemental
+                                </a>
+                                <a href="#" class="x-heading-7 x-link x-link--grey x-blog-header__classes-link">Restoration
+                                </a>
+                                <a href="#" class="x-heading-7 x-link x-link--grey x-blog-header__classes-link">Enhancement
+                                </a>
+                            </div>
+                            <div class="x-blog-header__classes-box">
+                                <div class="x-heading-5 x-blog-header__classes-title">Warlock
+                                </div>
+                                <a href="#" class="x-heading-7 x-link x-link--grey x-blog-header__classes-link">Affliction
+                                </a>
+                                <a href="#" class="x-heading-7 x-link x-link--grey x-blog-header__classes-link">Destruction
+                                </a>
+                                <a href="#" class="x-heading-7 x-link x-link--grey x-blog-header__classes-link">Demonology
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="x-heading-6 x-blog-header__category">
+                    <div class="x-heading-6 x-blog-header__category-name btn-modes-open">
+                        Guides by modes
+                        <svg class="x-blog-header__arrow" viewBox="0 0 16 17" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.5299 6.02843C11.7902 5.76808 12.2124 5.76808 12.4727 6.02843C12.7331 6.28878 12.7331 6.71089 12.4727 6.97124L8.47271 10.9712C8.22032 11.2236 7.81393 11.2325 7.55082 10.9913L3.55082 7.32461C3.27941 7.07581 3.26107 6.6541 3.50987 6.38269C3.75866 6.11127 4.18037 6.09294 4.45179 6.34173L7.98125 9.57708L11.5299 6.02843Z"
+                                  fill="currentColor"/>
+                        </svg>
+
+                    </div>
+                    <div class="x-blog-header__dropdown x-blog-header__modes-dropdown">
+                        <div class="x-blog-header__dropdown-inner x-blog-header__modes-inner">
+                            <a href="#" class="x-link x-link--grey x-heading-6 x-blog-header__modes-link">Dungeons</a>
+                            <a href="#" class="x-link x-link--grey x-heading-6 x-blog-header__modes-link">Raids</a>
+                            <a href="#" class="x-link x-link--grey x-heading-6 x-blog-header__modes-link">Lore</a>
+                            <a href="#" class="x-link x-link--grey x-heading-6 x-blog-header__modes-link">Reciepes</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="x-input x-blog-header__search filled">
+                <svg class="x-input__icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="0.7"
+                          d="M14.2929 16.7071C13.9024 16.3166 13.9024 15.6834 14.2929 15.2929C14.6834 14.9024 15.3166 14.9024 15.7071 15.2929L19.7071 19.2929C20.0976 19.6834 20.0976 20.3166 19.7071 20.7071C19.3166 21.0976 18.6834 21.0976 18.2929 20.7071L14.2929 16.7071Z"
+                          fill="currentColor"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M4 11C4 14.866 7.13401 18 11 18C14.866 18 18 14.866 18 11C18 7.13401 14.866 4 11 4C7.13401 4 4 7.13401 4 11ZM16 11C16 13.7614 13.7614 16 11 16C8.23858 16 6 13.7614 6 11C6 8.23858 8.23858 6 11 6C13.7614 6 16 8.23858 16 11Z"
+                          fill="currentColor"/>
+                </svg>
+                <input type="text" placeholder="Search" class="x-input__area" value="Update o">
+            </div>
+
+        </div>
+    </header>
+    <div class="x-content__wrapper x-blog__wrapper">
+        <div class="x-container">
+            <div class="x-content__grid x-blog__grid">
+                <div class="x-input x-blog__search x-content__col-full">
+                    <svg class="x-input__icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path opacity="0.7"
+                              d="M14.2929 16.7071C13.9024 16.3166 13.9024 15.6834 14.2929 15.2929C14.6834 14.9024 15.3166 14.9024 15.7071 15.2929L19.7071 19.2929C20.0976 19.6834 20.0976 20.3166 19.7071 20.7071C19.3166 21.0976 18.6834 21.0976 18.2929 20.7071L14.2929 16.7071Z"
+                              fill="currentColor"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M4 11C4 14.866 7.13401 18 11 18C14.866 18 18 14.866 18 11C18 7.13401 14.866 4 11 4C7.13401 4 4 7.13401 4 11ZM16 11C16 13.7614 13.7614 16 11 16C8.23858 16 6 13.7614 6 11C6 8.23858 8.23858 6 11 6C13.7614 6 16 8.23858 16 11Z"
+                              fill="currentColor"/>
+                    </svg>
+                    <input type="text" placeholder="Your search request" class="x-input__area">
+                </div>
+
+                <div class="x-content__result x-heading-1 x-content__col-full">Searching results for <span>“Update o”</span></div>
+
+
+                <div class="x-content__col-full">
+
+                    <div class="x-guide__cards x-guide__cards--mb-none">
+                        <a href="#" class="x-guide-card x-guide-card--line x-guide-card--medium">
+                            <div  class="x-guide-card__img-link x-guide-card__img-link--medium">
+                                <img src="./assets/images/guides/guide2.png" alt="img"
+                                     class="x-guide-card__img x-guide-card__img--medium">
+                            </div>
+                            <div class="x-guide-card__box x-guide-card__box--medium">
+                                <div class="x-caption-3 x-guide-card__date  x-guide-card__date--medium">UPDATED 08 FEB
+                                    2021 · VIEWS 66
+                                </div>
+                                <div class="x-guide-card__row">
+                                    <div
+                                       class="x-heading-3 x-guide-card__title x-guide-card__title--medium x-guide-card__title--mb">Basic
+                                        pvp
+                                        and
+                                        arena for new players
+                                    </div>
+                                    <div class="x-guide-card__img-link x-guide-card__img-link--medium">
+                                        <img src="./assets/images/guides/guide2.png" alt="img"
+                                             class="x-guide-card__img x-guide-card__img--medium x-guide-card__img--mob">
+                                    </div>
+                                </div>
+                                <div class="x-regular-160 x-guide-card__desc x-guide-card__desc--medium">This is less
+                                    than it was in BFA, but the
+                                    novelties do not end there. New affixes, covenant bonuses, unusual mechanics … and a
+                                    transmog with mounts of course. All of this we will spotlight in this guide.
+                                </div>
+                                <div class="x-link x-link--secondary x-caption-2 x-guide-card__link">Read
+                                    more...</div>
+
+                            </div>
+                        </a>
+                        <a href="#" class="x-guide-card x-guide-card--line x-guide-card--medium">
+                            <div class="x-guide-card__img-link x-guide-card__img-link--medium">
+                                <img src="./assets/images/guides/guide3.png" alt="img"
+                                     class="x-guide-card__img x-guide-card__img--medium">
+                            </div>
+                            <div class="x-guide-card__box x-guide-card__box--medium">
+                                <div class="x-caption-3 x-guide-card__date  x-guide-card__date--medium">UPDATED 08 FEB
+                                    2021 · VIEWS 66
+                                </div>
+                                <div class="x-guide-card__row">
+                                    <div
+                                       class="x-heading-3 x-guide-card__title x-guide-card__title--medium x-guide-card__title--mb">Basic
+                                        pvp
+                                        and
+                                        arena for new players
+                                    </div>
+                                    <div  class="x-guide-card__img-link x-guide-card__img-link--medium">
+                                        <img src="./assets/images/guides/guide3.png" alt="img"
+                                             class="x-guide-card__img x-guide-card__img--medium x-guide-card__img--mob">
+                                    </div>
+                                </div>
+                                <div class="x-regular-160 x-guide-card__desc x-guide-card__desc--medium">This is less
+                                    than it was in BFA, but the
+                                    novelties do not end there. New affixes, covenant bonuses, unusual mechanics … and a
+                                    transmog with mounts of course. All of this we will spotlight in this guide.
+                                </div>
+                                <div class="x-link x-link--secondary x-caption-2 x-guide-card__link">Read
+                                    more...</div>
+
+                            </div>
+                        </a>
+                        <a href="#" class="x-guide-card x-guide-card--line x-guide-card--medium">
+                            <div  class="x-guide-card__img-link x-guide-card__img-link--medium">
+                                <img src="./assets/images/guides/guide4.png" alt="img"
+                                     class="x-guide-card__img x-guide-card__img--medium">
+                            </div>
+                            <div class="x-guide-card__box x-guide-card__box--medium">
+                                <div class="x-caption-3 x-guide-card__date  x-guide-card__date--medium">UPDATED 08 FEB
+                                    2021 · VIEWS 66
+                                </div>
+                                <div class="x-guide-card__row">
+                                    <div
+                                       class="x-heading-3 x-guide-card__title x-guide-card__title--medium x-guide-card__title--mb">Basic
+                                        pvp
+                                        and
+                                        arena for new players
+                                    </div>
+                                    <div class="x-guide-card__img-link x-guide-card__img-link--medium">
+                                        <img src="./assets/images/guides/guide4.png" alt="img"
+                                             class="x-guide-card__img x-guide-card__img--medium x-guide-card__img--mob">
+                                    </div>
+                                </div>
+                                <div class="x-regular-160 x-guide-card__desc x-guide-card__desc--medium">This is less
+                                    than it was in BFA, but the
+                                    novelties do not end there. New affixes, covenant bonuses, unusual mechanics … and a
+                                    transmog with mounts of course. All of this we will spotlight in this guide.
+                                </div>
+                                <div class="x-link x-link--secondary x-caption-2 x-guide-card__link">Read
+                                    more...</div>
+
+                            </div>
+                        </a>
+                        <a href="#" class="x-guide-card x-guide-card--line x-guide-card--medium">
+                            <div  class="x-guide-card__img-link x-guide-card__img-link--medium">
+                                <img src="./assets/images/guides/guide5.png" alt="img"
+                                     class="x-guide-card__img x-guide-card__img--medium">
+                            </div>
+                            <div class="x-guide-card__box x-guide-card__box--medium">
+                                <div class="x-caption-3 x-guide-card__date  x-guide-card__date--medium">UPDATED 08 FEB
+                                    2021 · VIEWS 66
+                                </div>
+                                <div class="x-guide-card__row">
+                                    <div
+                                       class="x-heading-3 x-guide-card__title x-guide-card__title--medium x-guide-card__title--mb">Basic
+                                        pvp
+                                        and
+                                        arena for new players
+                                    </div>
+                                    <div class="x-guide-card__img-link x-guide-card__img-link--medium">
+                                        <img src="./assets/images/guides/guide5.png" alt="img"
+                                             class="x-guide-card__img x-guide-card__img--medium x-guide-card__img--mob">
+                                    </div>
+                                </div>
+                                <div class="x-regular-160 x-guide-card__desc x-guide-card__desc--medium">This is less
+                                    than it was in BFA, but the
+                                    novelties do not end there. New affixes, covenant bonuses, unusual mechanics … and a
+                                    transmog with mounts of course. All of this we will spotlight in this guide.
+                                </div>
+                                <div class="x-link x-link--secondary x-caption-2 x-guide-card__link">Read
+                                    more...</div>
+
+                            </div>
+                        </a>
+                        <a href="#" class="x-guide-card x-guide-card--line x-guide-card--medium">
+                            <div class="x-guide-card__img-link x-guide-card__img-link--medium">
+                                <img src="./assets/images/guides/guide6.png" alt="img"
+                                     class="x-guide-card__img x-guide-card__img--medium">
+                            </div>
+                            <div class="x-guide-card__box x-guide-card__box--medium">
+                                <div class="x-caption-3 x-guide-card__date  x-guide-card__date--medium">UPDATED 08 FEB
+                                    2021 · VIEWS 66
+                                </div>
+                                <div class="x-guide-card__row">
+                                    <div
+                                       class="x-heading-3 x-guide-card__title x-guide-card__title--medium x-guide-card__title--mb">Basic
+                                        pvp
+                                        and
+                                        arena for new players
+                                    </div>
+                                    <div class="x-guide-card__img-link x-guide-card__img-link--medium">
+                                        <img src="./assets/images/guides/guide6.png" alt="img"
+                                             class="x-guide-card__img x-guide-card__img--medium x-guide-card__img--mob">
+                                    </div>
+                                </div>
+                                <div class="x-regular-160 x-guide-card__desc x-guide-card__desc--medium">This is less
+                                    than it was in BFA, but the
+                                    novelties do not end there. New affixes, covenant bonuses, unusual mechanics … and a
+                                    transmog with mounts of course. All of this we will spotlight in this guide.
+                                </div>
+                                <div  class="x-link x-link--secondary x-caption-2 x-guide-card__link">Read
+                                    more...</div>
+
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="x-footer">
+        <div class="x-container">
+            <div class="x-footer__inner x-footer__inner--hidden">
+                <div class="x-regular-140 x-footer__text x-footer__text--lg-hidden">World of Warcraft tm and Blizzard
+                    Entertainment are registered
+                    trademarks of Blizzard Entertainment Inc. In U.S.A. and/or other countries.These terms and all related
+                    materials, logos, and images are copyright © Blizzard Entertainment. Cakeboost is in no way associated
+                    with or endorsed by Blizzard Entertainment™. SkipGrind is not selling wow ingame items, only offers you
+                    different services to make your ingame skill better and gifting you ingame items
+                </div>
+                <div class="x-caption-3 x-footer__text x-footer__text--lg-hidden">Created with care for gamers by <a
+                        href="#"
+                        class="x-link x-link--grey x-footer__link">Maxim
+                    Cheremisov</a>
+                </div>
+            </div>
+
+        </div>
+        <div class="x-footer__button-wrapper">
+            <a href="" class="x-button x-button--secondary x-footer__mob-button">
+                <span class="x-caption-3">Get WoW Shadowlands services</span>
+            </a>
+        </div>
+    </footer>
+
+    <!--jQuery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!--plugins-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.10/js/perfect-scrollbar.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.2.0/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+    <!--main-->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/select.js"></script>
+</div>
+</body>
+</html>

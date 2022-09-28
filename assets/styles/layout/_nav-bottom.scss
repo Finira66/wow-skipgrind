@@ -1,0 +1,41 @@
+.x-nav-bottom {
+  position: fixed;
+  backdrop-filter: $blur;
+  -webkit-backdrop-filter: $blur;
+  background: var(--color-transparent-1);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: rem(5px) 0;
+  display: none;
+  grid-template-columns: repeat(4, 1fr);
+  z-index: 30;
+  @media (max-width: $big-screen) {
+    display: grid;
+  }
+  &__icon {
+    @include icon-size;
+    margin-bottom: rem(2px);
+    color: var(--color-blue-grey-20);
+    flex-shrink: 0;
+  }
+  &__button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &.active {
+      .x-nav-bottom__icon {
+        color: var(--color-white);
+      }
+      .x-nav-bottom__label {
+        color: var(--color-white);
+      }
+    }
+  }
+  &__label {
+    text-align: center;
+    font-size: rem(10px);
+    line-height: 120%;
+    color: var(--color-blue-grey-40);
+  }
+}

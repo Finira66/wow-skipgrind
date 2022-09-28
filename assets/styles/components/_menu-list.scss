@@ -1,0 +1,28 @@
+.x-menu-list {
+  background: rgba(26, 31, 36, 0.7);
+  padding: rem(8px);
+  border-radius: 0 0 rem(16px) rem(16px);
+  &__link {
+    transition: .2s linear;
+    display: block;
+    padding: rem(11.5px) rem(16px);
+    border-radius: rem(8px);
+    color: var(--color-blue-grey-20);
+    margin-bottom: rem(4px);
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &:hover {
+      background: rgba(236, 239, 241, 0.05);
+      color: var(--color-blue-grey-10);
+    }
+    &:active {
+      background: var(--color-transparent-2);
+      color: var(--color-white);
+    }
+    &.active {
+      color: var(--color-white);
+      background: var(--color-transparent-2);
+    }
+  }
+}

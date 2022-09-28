@@ -1,0 +1,94 @@
+.x-our-advantages {
+  padding: rem(160px) 0;
+  @media (max-width: $xxl-screen) {
+    padding: rem(120px) 0;
+  }
+  @media (max-width: $xl-screen) {
+    padding: rem(100px) 0;
+  }
+  @media (max-width: $md-screen) {
+    padding: rem(80px) 0;
+  }
+  @media (max-width: $sm-screen) {
+    padding: rem(64px) 0;
+  }
+  &__overhead {
+    text-align: center;
+    margin-bottom: rem(32px);
+
+    span {
+      color: var(--color-secondary-60);
+    }
+    @media (max-width: $sm-screen) {
+      @include heading-2;
+      text-align: left;
+      margin-bottom: rem(24px);
+    }
+  }
+  &__title {
+    margin-bottom: rem(16px);
+
+    span {
+      color: var(--color-blue-grey-40);
+    }
+    @media (max-width: $sm-screen) {
+      @include heading-4;
+    }
+  }
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: rem(16px);
+    align-items: start;
+    @media (max-width: $xl-screen) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: $sm-screen) {
+      grid-gap: rem(24px);
+    }
+  }
+  &__item {
+    padding: rem(24px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    @media (max-width: $sm-screen) {
+      padding: 0;
+      align-items: flex-start;
+      text-align: left;
+    }
+  }
+  &__icon {
+    width: rem(72px);
+    height: rem(72px);
+    margin-bottom: rem(24px);
+    @include mask-contain-center;
+    background: var(--color-white);
+    &--call {
+      mask: url("../images/icons/active-call.svg");
+      -webkit-mask: url("../images/icons/active-call.svg");
+    }
+    &--shield {
+      mask: url("../images/icons/shield-protected.svg");
+      -webkit-mask: url("../images/icons/shield-protected.svg");
+    }
+    &--files {
+      mask: url("../images/icons/files.svg");
+      -webkit-mask: url("../images/icons/files.svg");
+    }
+    &--move {
+      mask: url("../images/icons/thunder-move.svg");
+      -webkit-mask: url("../images/icons/thunder-move.svg");
+    }
+    @media (max-width: $sm-screen) {
+      width: rem(48px);
+      height: rem(48px);
+
+    }
+  }
+  &__desc {
+    color: var(--color-blue-grey-20);
+  }
+}

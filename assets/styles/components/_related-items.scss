@@ -1,0 +1,26 @@
+.x-related-items {
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: rem(16px);
+    @media (max-width: $lg-screen) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: $sm-screen) {
+      grid-gap: rem(8px);
+    }
+  }
+  &--mb {
+    margin-bottom: rem(80px);
+    @media (max-width: $md-screen) {
+      margin-bottom: rem(48px);
+    }
+  }
+  &__title {
+    margin-bottom: rem(32px);
+    @media (max-width: $sm-screen) {
+      margin-bottom: rem(24px);
+    }
+  }
+
+}
